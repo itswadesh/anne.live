@@ -1,0 +1,8 @@
+query getLocation($lat: Float, $lng: Float) {
+  getLocation(lat: $lat, lng: $lng) {
+    city
+    district
+    state
+    zip
+  }
+}

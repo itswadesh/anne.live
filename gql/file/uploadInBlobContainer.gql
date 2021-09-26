@@ -1,0 +1,8 @@
+mutation uploadInBlobContainer($file: Upload!, $folder: String) {
+  uploadInBlobContainer(file: $file, folder: $folder) {
+    filename
+    mimetype
+    encoding
+    url
+  }
+}

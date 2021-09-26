@@ -1,0 +1,83 @@
+query noPrice(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $category: String
+  $store: ID
+) {
+  noPrice(
+    page: $page
+    skip: $skip
+    limit: $limit
+    search: $search
+    sort: $sort
+    category: $category
+    store: $store
+  ) {
+    data {
+      id
+      slug
+      name
+      type
+      price
+      mrp
+      stock
+      img
+      images
+      time
+      active
+      popularity
+      position
+      variants {
+        id
+        options {
+          name
+        }
+        stock
+        weight
+        barcode
+        sku
+        mrp
+        price
+        images
+        trackInventory
+        active
+        sort
+      }
+      trending
+      featured
+      hot
+      new
+      sale
+      recommended
+      title
+      metaDescription
+      keywords
+      ratings
+      reviews
+      category {
+        name
+      }
+      vendor {
+        id
+        firstName
+        lastName
+        phone
+        email
+        address {
+          address
+        }
+        info {
+          store
+          storePhotos
+        }
+      }
+    }
+    count
+    pageSize
+    noOfPage
+    page
+  }
+}

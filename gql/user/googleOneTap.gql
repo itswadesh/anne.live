@@ -1,0 +1,17 @@
+mutation googleOneTap($credential: String!) {
+  googleOneTap(credential: $credential) {
+    id
+    email
+    firstName
+    lastName
+    city
+    phone
+    avatar
+    role
+    verified
+    active
+    provider
+    createdAt
+    updatedAt
+  }
+}

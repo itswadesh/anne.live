@@ -1,0 +1,78 @@
+query ordersForPickup(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $status: String!
+  $vendor: ID!
+) {
+  ordersForPickup(
+    page: $page
+    skip: $skip
+    limit: $limit
+    search: $search
+    sort: $sort
+    status: $status
+    vendor: $vendor
+  ) {
+    count
+    pageSize
+    page
+    data {
+      _id {
+        id
+        orderNo
+        reviewed
+        createdAt
+        updatedAt
+        user {
+          firstName
+          lastName
+          phone
+          email
+          gender
+          avatar
+        }
+        address {
+          address
+          email
+          phone
+          firstName
+          lastName
+        }
+        codPaid
+        payment {
+          method
+          status
+          amount
+          amount_paid
+          amount_due
+        }
+        amount {
+          qty
+          subtotal
+          total
+          shipping
+          discount
+        }
+        paymentOrderId
+      }
+      items {
+        pid
+        name
+        slug
+        img
+        price
+        qty
+        status
+        vendor {
+          store
+          firstName
+          lastName
+          phone
+        }
+      }
+    }
+  }
+}

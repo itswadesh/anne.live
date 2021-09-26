@@ -1,0 +1,3 @@
+mutation gInsertProduct($productId: ID!, $authCode: String!) {
+  gInsertProduct(productId: $productId, authCode: $authCode)
+}

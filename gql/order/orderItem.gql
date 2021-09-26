@@ -1,0 +1,112 @@
+query orderItem($id: ID!) {
+  orderItem(id: $id) {
+    id
+    orderId
+    status
+    pid
+    posInvoiceNo
+    itemOrderNo
+    name
+    slug
+    img
+    tracking
+    shippingCharge
+    price
+    qty
+    tax
+    brandName
+    brandImg
+    size
+    color
+    trackingId
+    returnTrackingId
+    courierName
+    returnCourierName
+    type
+    amountRefunded
+    refunds {
+      message
+      qty
+      time
+      amount
+      refundId
+    }
+    #order level info
+    orderNo
+    otp
+    createdAt
+    paySuccess
+    payment {
+      id
+    }
+    paymentMode
+    paymentStatus
+    paymentCurrency
+    paymentReferenceId
+    paymentOrderId
+    paymentReceipt
+    invoiceId
+    paymentGateway
+    codPaid
+    amountPaid
+    amountDue
+    totalAmountRefunded
+    paymentMsg
+    paymentTime
+    paid
+    userFirstName
+    userLastName
+    userPhone
+    userEmail
+    invoiceLink
+    returnValidTill
+    returnReason
+    discount
+    totalDiscount
+    amount {
+      total
+      discount
+      totalDiscount
+      subtotal
+    }
+    user {
+      id
+      firstName
+    }
+    address {
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    store {
+      id
+      name
+      email
+    }
+    vendor {
+      firstName
+      lastName
+      phone
+      address {
+        address
+      }
+      store
+    }
+    orderHistory {
+      id
+      status
+      title
+      body
+      icon
+      public
+      index
+      time
+    }
+  }
+}

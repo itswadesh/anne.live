@@ -1,0 +1,3 @@
+mutation importCategory($file: Upload!) {
+  importCategory(file: $file)
+}

@@ -1,0 +1,19 @@
+query groupByBanner1 {
+  groupByBanner1 {
+    _id
+    data {
+      link
+      heading
+      img
+      sort
+      type
+      pageId
+      active
+      store
+      groupId
+      groupTitle
+      createdAt
+      updatedAt
+    }
+  }
+}

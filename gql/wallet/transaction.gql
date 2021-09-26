@@ -1,0 +1,12 @@
+query{
+  transaction(walletId:"60cb5aa44d4efd459460b486"){
+    id
+    amount
+    remark
+    direction
+    user
+    referedUser
+    createdAt
+    updatedAt
+  }
+}

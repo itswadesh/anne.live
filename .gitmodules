@@ -1,0 +1,3 @@
+[submodule "gql"]
+	path = gql
+	url = git@github.com:itswadesh/litekart-gql.git

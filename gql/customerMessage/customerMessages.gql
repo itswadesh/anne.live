@@ -1,0 +1,30 @@
+query customerMessages(
+  $page: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $store: ID
+) {
+  customerMessages(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      email
+      message
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}

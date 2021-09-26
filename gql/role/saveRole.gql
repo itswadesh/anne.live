@@ -1,0 +1,13 @@
+mutation saveRole(
+  $id: String!
+  $name: String
+  $roles: [String]
+  $active: Boolean
+) {
+  saveRole(id: $id, name: $name, roles: $roles, active: $active) {
+    id
+    name
+    roles
+    # active
+  }
+}

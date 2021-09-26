@@ -1,0 +1,33 @@
+mutation saveSlot(
+  $id: String!
+  $name: String
+  $val: String
+  $slug: String
+  $info: String
+  $active: Boolean
+  $store: ID
+) {
+  saveSlot(
+    id: $id
+    name: $name
+    val: $val
+    slug: $slug
+    info: $info
+    active: $active
+    store: $store
+  ) {
+    id
+    name
+    val
+    slug
+    info
+    active
+    store
+  }
+}
+
+# {
+#   "id": "new",
+#   "name": "test",
+#   "store": "60fb92e49f73050d30287cae"
+# }

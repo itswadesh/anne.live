@@ -1,0 +1,6 @@
+query sorts {
+  sorts {
+    name
+    val
+  }
+}

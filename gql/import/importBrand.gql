@@ -1,0 +1,3 @@
+mutation importBrand($file: Upload!) {
+  importBrand(file: $file)
+}

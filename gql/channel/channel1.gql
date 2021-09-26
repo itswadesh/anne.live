@@ -1,0 +1,22 @@
+query channel1($id: ID!) {
+  channel1(id: $id) {
+    id
+    product
+    products
+    scheduleDateTime
+    title
+    img
+    requestId
+    cid
+    ctime
+    pushUrl
+    httpPullUrl
+    hlsPullUrl
+    rtmpPullUrl
+    name
+    code
+    msg
+    user
+    users
+  }
+}

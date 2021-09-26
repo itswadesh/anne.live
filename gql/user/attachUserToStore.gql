@@ -1,0 +1,28 @@
+mutation attachUserToStore($storeId: ID!, $userId: ID!) {
+  attachUserToStore(storeId: $storeId, userId: $userId) {
+    id
+    email
+    firstName
+    lastName
+    role
+    slug
+    avatar
+    verified
+    gender
+    city
+    phone
+    active
+    verified
+    shippingCharges
+    freeShippingOn
+    storeName
+    banner
+    roles
+    store
+  }
+}
+
+# {
+#   "storeId": "612a38f0054f2a4338ac9060",
+#   "userId": "5ec8160b8dec20283f337aba"
+# }

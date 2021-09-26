@@ -1,0 +1,27 @@
+mutation saveCart($id: String, $active: Boolean) {
+  saveCart(id: $id, active: $active) {
+    items {
+      pid
+      name
+      slug
+      qty
+      price
+      img
+      options
+      tracking
+    }
+    qty
+    subtotal
+    discount {
+      code
+      value
+      text
+      amount
+    }
+    shipping {
+      charge
+    }
+    total
+    tax
+  }
+}

@@ -1,0 +1,26 @@
+mutation notifyFirebase(
+  $id: String!
+  $token: String
+  $platform: String
+  $device_id: String
+  $user_type: String
+  $active: Boolean
+) {
+  notifyFirebase(
+    id: $id
+    token: $token
+    platform: $platform
+    device_id: $device_id
+    user_type: $user_type
+    active: $active
+  ) {
+    id
+    token
+    platform
+    device_id
+    user_type
+    active
+    createdAt
+    updatedAt
+  }
+}

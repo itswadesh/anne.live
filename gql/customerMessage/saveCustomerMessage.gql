@@ -1,0 +1,28 @@
+mutation saveCustomerMessage(
+  $id: String!
+  $name: String
+  $email: String
+  $message: String
+  $store: ID
+) {
+  saveCustomerMessage(
+    id: $id
+    name: $name
+    message: $message
+    email: $email
+    store: $store
+  ) {
+    id
+    name
+    email
+    message
+    store
+  }
+}
+
+# {
+#   "id": "new",
+#   "name": "prak",
+#   "email": "pra@",
+#   "message": "dsfasd"
+# }

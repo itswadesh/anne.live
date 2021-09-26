@@ -1,0 +1,3 @@
+mutation changeCurrency($code: String!) {
+  changeCurrency(code: $code)
+}

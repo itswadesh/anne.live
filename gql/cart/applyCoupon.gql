@@ -1,0 +1,26 @@
+mutation applyCoupon($code: String!) {
+  applyCoupon(code: $code) {
+    items {
+      pid
+      name
+      slug
+      qty
+      price
+      img
+      options
+    }
+    qty
+    subtotal
+    discount {
+      code
+      value
+      text
+      amount
+    }
+    shipping {
+      charge
+    }
+    total
+    tax
+  }
+}

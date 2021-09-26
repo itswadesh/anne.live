@@ -1,0 +1,49 @@
+mutation saveVariant(
+  $pid: ID!
+  $id: String
+  $options: [OptionIp]
+  $stock: Float
+  $weight: Float
+  $barcode: String
+  $trackInventory: Boolean
+  $sku: String
+  $mrp: Float
+  $price: Float
+  $img: String
+  $images: [String]
+  $sort: Int
+  $active: Boolean
+) {
+  saveVariant(
+    pid: $pid
+    id: $id
+    options: $options
+    stock: $stock
+    weight: $weight
+    barcode: $barcode
+    trackInventory: $trackInventory
+    sku: $sku
+    mrp: $mrp
+    price: $price
+    img: $img
+    images: $images
+    sort: $sort
+    active: $active
+  ) {
+    id
+    options {
+      name
+    }
+    stock
+    weight
+    barcode
+    trackInventory
+    sku
+    mrp
+    price
+    img
+    images
+    sort
+    active
+  }
+}

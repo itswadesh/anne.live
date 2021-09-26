@@ -1,0 +1,23 @@
+query variant($id: String, $slug: String) {
+  variant(id: $id, slug: $slug) {
+    id
+    name
+    sku
+    images
+    sort
+    active
+    price
+    mrp
+    weight
+    trackInventory
+    stock
+    unit
+    barcode
+    options {
+      name
+    }
+    active
+    createdAt
+    updatedAt
+  }
+}

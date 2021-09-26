@@ -1,0 +1,20 @@
+query fbProduct($fbProductId: String!) {
+  fbProduct(fbProductId: $fbProductId) {
+    id
+    retailer_id
+    name
+    age_group
+    availability
+    brand
+    category
+    condition
+    currency
+    description
+    gender
+    image_url
+    price
+    retailer_id
+    retailer_product_group_id
+    url
+  }
+}

@@ -1,0 +1,5 @@
+mutation stripe($address: ID, $token: String!) {
+  stripe(address: $address, token: $token) {
+    id
+  }
+}

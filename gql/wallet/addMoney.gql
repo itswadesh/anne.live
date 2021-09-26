@@ -1,0 +1,5 @@
+mutation addMoney( $amount: Int!) {
+  addMoney( amount: $amount) {
+    id
+  }
+}

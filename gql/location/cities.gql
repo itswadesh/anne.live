@@ -1,0 +1,14 @@
+query cities($page: Int, $search: String, $limit: Int, $sort: String) {
+  cities(page: $page, search: $search, limit: $limit, sort: $sort) {
+    data {
+      id
+      name
+      active
+      lat
+      lng
+    }
+    count
+    pageSize
+    page
+  }
+}

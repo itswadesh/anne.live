@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  www:
+    build: ./
+    #image: itswadesh/tablez-fontend
+    container_name: tablez-fontend
+    restart: unless-stopped
+    ports:
+      - '4400:4400'
+    environment:
+      - NODE_ENV=production
+      - PORT=4400
+      - HTTP_ENDPOINT=https://aapi.litekart.in
+      - WWW_URL=https://dev.tablez.com

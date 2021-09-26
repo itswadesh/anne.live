@@ -1,0 +1,3 @@
+mutation importFaq($file: Upload!) {
+  importFaq(file: $file)
+}

@@ -1,0 +1,27 @@
+mutation removeUserFromStore($userId: ID!) {
+  removeUserFromStore(userId: $userId) {
+    id
+    email
+    firstName
+    lastName
+    role
+    slug
+    avatar
+    verified
+    gender
+    city
+    phone
+    active
+    verified
+    shippingCharges
+    freeShippingOn
+    storeName
+    banner
+    roles
+    store
+  }
+}
+
+# {
+#   "userId": "5ec8160b8dec20283f337aba"
+# }

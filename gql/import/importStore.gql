@@ -1,0 +1,3 @@
+mutation importStore($file: Upload!) {
+  importStore(file: $file)
+}

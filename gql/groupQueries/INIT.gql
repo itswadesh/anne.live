@@ -1,0 +1,408 @@
+query INIT($domain: String) {
+  settings {
+    id
+    websiteName
+    websiteLegalName
+    liveCommerce
+    multilingual
+    closed
+    closedMessage
+    minimumOrderValue
+    title
+    alert
+    keywords
+    description
+    tax {
+      cgst
+      sgst
+      igst
+    }
+    demo
+    RAZORPAY_KEY_ID
+    GOOGLE_CLIENT_ID
+    stripePublishableKey
+    enableStripe
+    enableRazorpay
+    currencyCode
+    currencySymbol
+    currencyDecimals
+    openGraphImage
+    shipping {
+      deliveryDays
+      charge
+      free
+      method
+      enabled
+      provider
+    }
+    userRoles
+    websiteEmail
+    shopPhone
+    shopAddress
+    country
+    logo
+    logoMobile
+    logoDark
+    logoMobileDark
+    favicon
+    CDN_URL
+    S3_URL
+    searchbarText
+    pageSize
+    returnReasons
+    orderStatuses {
+      status
+      title
+      body
+      icon
+      public
+      index
+    }
+    paymentStatuses
+    paymentMethods {
+      active
+      name
+      value
+      img
+      color
+      position
+      text
+    }
+    otpLogin
+    sms {
+      AUTO_VERIFICATION_ID
+      enabled
+      provider
+    }
+    email {
+      enabled
+      from
+      cc
+      bcc
+      printers
+    }
+    storage {
+      enabled
+      provider
+    }
+    review {
+      enabled
+      moderate
+    }
+    product {
+      moderate
+    }
+    customerOrderNotifications {
+      orderConfirmation
+      orderStatusChanged
+      orderShipped
+      orderIsReadyForPickup
+      downloadEGoods
+      giftCardPurchased
+    }
+    adminNotifications {
+      newOrderPlaced
+      lowStockNotification
+    }
+    ADMIN_PANEL_LINK
+    DOCS_LINK
+    storageProvider
+    googleMapsApi
+    facebook
+    twitter
+    google
+    instagram
+    linkedin
+    enableTax
+    locationExpiry
+    WWW_URL
+    referralBonus
+    joiningBonus
+    isMultiVendor
+    isMultiStore
+    isMegamenu
+    isSaas
+    isSearch
+  }
+  storeOne(domain: $domain) {
+    id
+    active
+    adminNotifications {
+      lowStockNotification
+      newOrderPlaced
+    }
+    address
+    alert
+    analyticsTrackingId
+    banners
+    city
+    closed
+    closedMessage
+    country
+    currency
+    currencyCode
+    currencyDecimals
+    currencySymbol
+    customerOrderNotifications {
+      downloadEGoods
+      giftCardPurchased
+      orderConfirmation
+      orderIsReadyForPickup
+      orderShipped
+      orderStatusChanged
+    }
+    description
+    metaDescription
+    dimentionUnit
+    domain
+    email
+    facebook
+    facebookPixelId
+    facebookUrl
+    favicon
+    firstName
+    freeShippingOn
+    gdprCookieConsent
+    google
+    googleAdsTag
+    homeMeta1
+    homeMeta2
+    homeMeta3
+    homeMeta4
+    img
+    images
+    bankAccountNo
+    bankAccountHolderName
+    bankIfscCode
+    instagram
+    instagramUrl
+    isHideNilStock
+    isMegamenu
+    isOpen
+    isSearch
+    keywords
+    lastName
+    lat
+    legalName
+    linkedin
+    lng
+    locality
+    logo
+    logoDark
+    logoMobile
+    logoMobileDark
+    minimumOrderValue
+    minOrderValue
+    name
+    openGraphImage
+    pageSize
+    phone
+    pinterestTag
+    pinterestUrl
+    qrCode
+    review {
+      enabled
+      moderate
+    }
+    searchbarText
+    shipping {
+      charge
+      deliveryDays
+      enabled
+      free
+      method
+      provider
+    }
+    shippingCharge
+    shopAddress
+    shopPhone
+    slug
+    snapChatPixel
+    state
+    storeId
+    timeZone
+    timing
+    title
+    twitter
+    twitterUrl
+    websiteEmail
+    websiteLegalName
+    websiteName
+    weightUnit
+    youtubeUrl
+    zip
+    createdAt
+    updatedAt
+    user {
+      firstName
+      lastName
+      email
+      phone
+    }
+  }
+  megamenu(domain: $domain) {
+    id
+    name
+    slug
+    img
+    featured
+    children {
+      name
+      slug
+      img
+      featured
+      children {
+        name
+        slug
+        img
+        featured
+        children {
+          name
+          slug
+          img
+          featured
+          children {
+            name
+            slug
+            img
+            featured
+            children {
+              name
+              slug
+              img
+              featured
+              children {
+                name
+                slug
+                img
+                featured
+                children {
+                  name
+                  slug
+                  img
+                  featured
+                  children {
+                    name
+                    slug
+                    img
+                    featured
+                    children {
+                      name
+                      slug
+                      img
+                      featured
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  cart {
+    id
+    items {
+      pid
+      barcode
+      tax
+      name
+      slug
+      qty
+      price
+      mrp
+      shippingCharge
+      img
+      options
+      tracking
+      brandName
+      vendorFirstName
+      vendorLastName
+      vendorPhone
+    }
+    qty
+    subtotal
+    discount {
+      code
+      value
+      text
+      amount
+    }
+    shipping {
+      charge
+    }
+    tax
+    total
+  }
+  me {
+    id
+    firstName
+    lastName
+    email
+    phone
+    gender
+    role
+    verified
+    active
+    provider
+    active
+    avatar
+    referralCode
+    currentBalance
+    storeName
+    banner
+    store
+    roles {
+      id
+      name
+      roles
+    }
+    # product_sold
+    address {
+      id
+      email
+      firstName
+      lastName
+      address
+      town
+      city
+      district
+      state
+      country
+      zip
+      phone
+      active
+      # lat
+      # lng
+    }
+    info {
+      public
+      store
+      storePhotos
+    }
+    businessDetail {
+      bankName
+      accountNo
+      accountHolderName
+      ifsc
+    }
+    # plan
+  }
+  popularSearches(sort: "-popularity", domain: $domain) {
+    count
+    page
+    pageSize
+    data {
+      id
+      text
+      popularity
+      store {
+        id
+        name
+        email
+        phone
+      }
+    }
+  }
+}

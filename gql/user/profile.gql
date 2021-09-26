@@ -1,0 +1,21 @@
+query profile($id: ID!) {
+  profile(id: $id) {
+    id
+    email
+    firstName
+    lastName
+    avatar
+    banner
+    address
+    city
+    state
+    zip
+    phone
+    active
+    type
+    carbon_neutral
+    badges
+    subscription_from
+    subscription_to
+  }
+}

@@ -1,0 +1,3 @@
+query hasOrder($product: ID!) {
+  hasOrder(product: $product)
+}

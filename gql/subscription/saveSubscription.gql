@@ -1,0 +1,84 @@
+mutation saveSubscription(
+  $id: String!
+  $abandonnedCartRecovery: Boolean
+  $active: Boolean
+  $annualMonthlyPrice: Float
+  $chatSupport: Boolean
+  $customDomain: Boolean
+  $description: String
+  $discountCoupons: Boolean
+  $emailSupport: Boolean
+  $freeSSL: Boolean
+  $misReports: Boolean
+  $monthlyPrice: Float
+  $name: String
+  $onlineStore: Boolean
+  $premiumSupport: Boolean
+  $productImportExport: Boolean
+  $productsAllowed: Int
+  $removeMisikiLogo: Boolean
+  $salesChannels: Boolean
+  $seoOptions: Boolean
+  $title: String
+  $transactionFees: Float
+  $transactionFeesType: String
+  $unlimitedProducts: Boolean
+  $unlimitedValidity: Boolean
+) {
+  saveSubscription(
+    id: $id
+    abandonnedCartRecovery: $abandonnedCartRecovery
+    active: $active
+    annualMonthlyPrice: $annualMonthlyPrice
+    chatSupport: $chatSupport
+    customDomain: $customDomain
+    description: $description
+    discountCoupons: $discountCoupons
+    emailSupport: $emailSupport
+    freeSSL: $freeSSL
+    misReports: $misReports
+    monthlyPrice: $monthlyPrice
+    name: $name
+    onlineStore: $onlineStore
+    premiumSupport: $premiumSupport
+    productImportExport: $productImportExport
+    productsAllowed: $productsAllowed
+    removeMisikiLogo: $removeMisikiLogo
+    salesChannels: $salesChannels
+    seoOptions: $seoOptions
+    title: $title
+    transactionFees: $transactionFees
+    transactionFeesType: $transactionFeesType
+    unlimitedProducts: $unlimitedProducts
+    unlimitedValidity: $unlimitedValidity
+  ) {
+    id
+    name
+    abandonnedCartRecovery
+    active
+    annualMonthlyPrice
+    chatSupport
+    customDomain
+    description
+    discountCoupons
+    emailSupport
+    freeSSL
+    misReports
+    monthlyPrice
+    name
+    onlineStore
+    premiumSupport
+    productImportExport
+    productsAllowed
+    removeMisikiLogo
+    salesChannels
+    seoOptions
+    title
+    transactionFees
+    transactionFeesType
+    unlimitedProducts
+    unlimitedValidity
+    createdAt
+    updatedAt
+  }
+}

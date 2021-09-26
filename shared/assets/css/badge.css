@@ -1,0 +1,56 @@
+.badge {
+  display: inline-block;
+  position: absolute;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 1;
+  padding: 0 4px;
+  line-height: 16px;
+}
+.badge:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  left: 100%;
+  width: 0;
+  height: 0;
+  top: 0;
+}
+.pink {
+  background: rgba(255, 63, 108, 0.8);
+}
+.pink:after {
+  border-color: rgba(255, 63, 108, 0.5) transparent rgba(255, 63, 108, 0.5)
+    rgba(255, 63, 108, 0.8);
+}
+.blue {
+  background: rgba(26, 40, 230, 0.8);
+}
+.blue:after {
+  border-color: rgba(24, 36, 202, 0.5) transparent rgba(24, 36, 202, 0.5)
+    rgba(24, 36, 202, 0.8);
+}
+.orange {
+  background: rgba(255, 102, 0, 0.8);
+}
+.orange:after {
+  border-color: rgba(255, 102, 0, 0.5) transparent rgba(255, 102, 0, 0.5)
+    rgba(255, 102, 0, 0.8);
+}
+.green {
+  background: rgba(13, 207, 6, 0.8);
+}
+.green:after {
+  border-color: rgba(13, 207, 6, 0.5) transparent rgba(13, 207, 6, 0.5)
+    rgba(13, 207, 6, 0.8);
+}
+.yellow {
+  background: rgb(251, 188, 5, 0.8);
+}
+.yellow:after {
+  border-color: rgb(251, 188, 5, 0.5) transparent rgba(251, 188, 5, 0.5)
+    rgba(251, 188, 5, 0.8);
+}

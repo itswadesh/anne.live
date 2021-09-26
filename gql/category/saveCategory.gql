@@ -1,0 +1,69 @@
+mutation saveCategory(
+  $id: String!
+  $name: String
+  $parent: ID
+  $brand: ID
+  $slug: String
+  $description: String
+  $categoryId: String
+  $refreshSlug: Boolean
+  $img: String
+  $level: Int
+  $meta: String
+  $metaTitle: String
+  $metaDescription: String
+  $metaKeywords: String
+  $position: Int
+  $featured: Boolean
+  $featuredSort: Float
+  $megamenu: Boolean
+  $active: Boolean
+  $shopbycategory: Boolean
+  $store: ID
+) {
+  saveCategory(
+    id: $id
+    name: $name
+    description: $description
+    categoryId: $categoryId
+    parent: $parent
+    brand: $brand
+    slug: $slug
+    refreshSlug: $refreshSlug
+    img: $img
+    level: $level
+    meta: $meta
+    metaTitle: $metaTitle
+    metaDescription: $metaDescription
+    metaKeywords: $metaKeywords
+    position: $position
+    megamenu: $megamenu
+    featured: $featured
+    featuredSort: $featuredSort
+    active: $active
+    shopbycategory: $shopbycategory
+    store: $store
+  ) {
+    id
+    name
+    description
+    parent
+    categoryId
+    brand
+    slug
+    img
+    position
+    level
+    meta
+    metaTitle
+    metaDescription
+    metaKeywords
+    megamenu
+    featured
+    featuredSort
+    active
+    shopbycategory
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,3 @@
+mutation removeDeal($id: ID!) {
+  removeDeal(id: $id)
+}

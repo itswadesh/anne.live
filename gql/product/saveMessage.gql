@@ -1,0 +1,11 @@
+mutation saveMessage($id: String, $body: String) {
+  saveMessage(id: $id, body: $body) {
+    id
+    body
+    user {
+      firstName
+      lastName
+      phone
+    }
+  }
+}

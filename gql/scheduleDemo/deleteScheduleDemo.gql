@@ -1,0 +1,3 @@
+mutation deleteScheduleDemo($id: ID!) {
+  deleteScheduleDemo(id: $id)
+}

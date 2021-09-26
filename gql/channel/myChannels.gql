@@ -1,0 +1,67 @@
+query myChannels(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $q: String
+) {
+  myChannels(
+    page: $page
+    skip: $skip
+    search: $search
+    limit: $limit
+    sort: $sort
+    q: $q
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      scheduleDateTime
+      title
+      img
+      requestId
+      cid
+      ctime
+      pushUrl
+      httpPullUrl
+      hlsPullUrl
+      rtmpPullUrl
+      name
+      code
+      msg
+      product {
+        id
+        name
+        img
+        slug
+        price
+        mrp
+      }
+      products {
+        id
+        name
+        img
+        slug
+        price
+        mrp
+      }
+      user {
+        id
+        firstName
+        lastName
+        email
+        phone
+      }
+      users {
+        id
+        firstName
+        lastName
+        email
+        phone
+      }
+    }
+  }
+}

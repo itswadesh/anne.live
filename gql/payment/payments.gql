@@ -1,0 +1,52 @@
+query payments(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  payments(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      _id
+      orderId
+      paymentOrderId
+      paymentMode
+      paymentGateway
+      referenceId
+      status
+      txMsg
+      txTime
+      invoiceId
+      receipt
+      currency
+      paid
+      amountPaid
+      amountRefunded
+      amountDue
+      captured
+      email
+      contact
+      notes
+      fee
+      tax
+      errorCode
+      errorDescription
+      refundStatus
+      description
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}

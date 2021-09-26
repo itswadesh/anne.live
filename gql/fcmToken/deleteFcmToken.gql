@@ -1,0 +1,3 @@
+mutation deleteFcmToken($id: ID!) {
+  deleteFcmToken(id: $id)
+}

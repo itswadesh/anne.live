@@ -1,0 +1,24 @@
+query getAllStoredVideos {
+  getAllStoredVideos {
+    pageSize
+    totalRecords
+    currentPage
+    pageNum
+    data {
+      createTime
+      origUrl
+      playSupport
+      downloadOrigUrl
+      videoName
+      vid
+      durationMsec
+      status
+      updateTime
+      typeName
+      duration
+      snapshotUrl
+      initialSize
+      typeId
+    }
+  }
+}

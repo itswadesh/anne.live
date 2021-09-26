@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+yarn-error.log
+yarn.lock
+.nuxt
+.env
+dist
+prod
+.idea
+static/sw.js
+.eslintcache
+
+config/index.js
+static/icon.png
+static/favicon.ico

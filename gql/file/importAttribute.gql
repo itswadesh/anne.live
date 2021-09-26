@@ -1,0 +1,3 @@
+mutation importAttribute($file: Upload!) {
+  importAttribute(file: $file)
+}

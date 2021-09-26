@@ -1,0 +1,18 @@
+mutation cashfreePayNow($address: ID) {
+  cashfreePayNow(address: $address) {
+    appId
+    orderId
+    orderAmount
+    orderCurrency
+    orderNote
+    customerName
+    customerEmail
+    customerPhone
+    returnUrl
+    notifyUrl
+    signature
+    token
+    url
+    stage
+  }
+}

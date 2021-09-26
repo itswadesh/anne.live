@@ -1,0 +1,24 @@
+query emailTemplate($id: ID!) {
+  emailTemplate(id: $id) {
+    id
+    name
+    title
+    description
+    content
+    link
+    active
+    createdAt
+    updatedAt
+    user {
+      id
+      firstName
+      email
+      phone
+    }
+    store {
+      id
+      name
+      email
+    }
+  }
+}

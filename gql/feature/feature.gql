@@ -1,0 +1,15 @@
+query feature($id: String!) {
+  feature(id: $id) {
+    id
+    name
+    value
+    type
+    product
+    active
+    store {
+      id
+      name
+      email
+    }
+  }
+}

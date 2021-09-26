@@ -1,0 +1,103 @@
+<template>
+  <section
+    v-if="channel"
+    class="w-full rounded-md shadow-md hover:shadow bg-white text-gray-800"
+  >
+    <!-- channel section start  -->
+    <div class="relative">
+      <!-- <a
+        :href="`https://litekartlive.netlify.app/netease/watch?channelName=${channel.id}`"
+        target="_blank" -->
+      <nuxt-link :to="`/${channel.id}`" class="h-full w-full">
+        <img
+          v-lazy="channel.img"
+          class="w-full h-40 rounded-t-lg object-cover"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </nuxt-link>
+      <div class="absolute right-0 top-0 border rounded-full border-gray-200">
+        <div class="mx-2 my-0.5 flex items-center">
+          <div class="h-2 w-2 rounded-full bg-red-500 me-1 animate-pulse"></div>
+          <span class="text-xs">LIVE</span>
+        </div>
+      </div>
+    </div>
+    <!-- channel section end -->
+    <!-- channel details start  -->
+    <div class="p-2 flex justify-start mt-2">
+      <img
+        v-lazy="channel.user.avatar"
+        alt=""
+        class="object-cover w-10 h-10 rounded-full border border-gray-300"
+      />
+      <div class="flex flex-col ms-4">
+        <!-- <a
+          :href="`https://litekartlive.netlify.app/netease/watch?channelName=${channel.id}`" -->
+        <nuxt-link
+          :to="`/${channel.id}`"
+          class="font-semibold truncate cursor-pointer hover:text-purple-500"
+        >
+          {{ channel.title }}
+          <!-- <span
+            class="
+              bg-gray-100
+              border
+              rounded-sm
+              text-xs
+              font-light
+              px-2
+              py-0.5
+              text-gray-600
+              ms-3
+            "
+            >ENGLISH</span
+          > -->
+        </nuxt-link>
+        <div
+          class="
+            text-sm
+            font-light
+            cursor-pointer
+            hover:text-purple-500
+            max-w-max
+            mt-1
+          "
+        >
+          {{ channel.user.firstName }} {{ channel.user.lastName }}
+        </div>
+
+        <div
+          class="
+            text-sm
+            font-light
+            cursor-pointer
+            hover:text-purple-500
+            max-w-max
+          "
+        >
+          {{ channel.scheduleDateTime | date }}
+        </div>
+        <div class="flex mt-2 space-x-2"></div>
+      </div>
+    </div>
+    <!-- channel details end -->
+  </section>
+</template>
+
+<script>
+export default {
+  props: {
+    channel: { type: Object, default: () => {} },
+  },
+}
+</script>
+
+<style scoped>
+.zoom {
+  transition: transform 0.7s;
+}
+.zoom:hover {
+  transform: scale(1.035);
+}
+</style>

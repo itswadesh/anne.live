@@ -1,0 +1,19 @@
+query profiles($type: String) {
+  profiles(type: $type) {
+    id
+    email
+    firstName
+    lastName
+    banner
+    city
+    state
+    zip
+    phone
+    active
+    type
+    carbon_neutral
+    badges
+    subscription_from
+    subscription_to
+  }
+}

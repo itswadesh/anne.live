@@ -1,0 +1,5 @@
+mutation stripePayNow($address: ID) {
+  stripePayNow(address: $address) {
+    id
+  }
+}

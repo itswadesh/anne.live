@@ -1,0 +1,58 @@
+mutation saveDiscount(
+  $id: String!
+  $active: Boolean
+  $amount: Float
+  $applyOn: String
+  $description: String
+  $img: String
+  $name: String
+  $q: String
+  $ruleType: String
+  $type: String
+  $maximumUsage: Int
+  $startDate: String
+  $endDate: String
+  $numberOfTimeUsed: Int
+  $seller: ID
+) {
+  saveDiscount(
+    id: $id
+    active: $active
+    amount: $amount
+    applyOn: $applyOn
+    description: $description
+    img: $img
+    name: $name
+    q: $q
+    ruleType: $ruleType
+    type: $type
+    maximumUsage: $maximumUsage
+    startDate: $startDate
+    endDate: $endDate
+    numberOfTimeUsed: $numberOfTimeUsed
+    seller: $seller
+  ) {
+    id
+    active
+    amount
+    applyOn
+    description
+    img
+    name
+    q
+    ruleType
+    type
+    maximumUsage
+    startDate
+    endDate
+    numberOfTimeUsed
+  }
+}
+
+# {
+#   "id": "new",
+#   "name": "buy 5 get 4 free",
+#   "amount": 33.33,
+#   "img": "img.com",
+#   "description": "ppp"
+# }

@@ -1,0 +1,17 @@
+query color($id: ID!) {
+  color(id: $id) {
+    id
+    name
+    color_code
+    info
+    featured
+    active
+    createdAt
+    updatedAt
+    store {
+      id
+      name
+      email
+    }
+  }
+}

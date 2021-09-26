@@ -1,0 +1,3 @@
+mutation importSize($file: Upload!) {
+  importSize(file: $file)
+}

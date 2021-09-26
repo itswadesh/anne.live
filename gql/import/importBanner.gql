@@ -1,0 +1,3 @@
+mutation importBanner($file: Upload!) {
+  importBanner(file: $file)
+}

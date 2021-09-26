@@ -1,0 +1,169 @@
+query order($id: ID!) {
+  order(id: $id) {
+    id
+    orderNo
+    otp
+    createdAt
+    paySuccess
+    payment {
+      id
+    }
+    paymentMode
+    paymentStatus
+    paymentCurrency
+    paymentReferenceId
+    paymentOrderId
+    paymentReceipt
+    invoiceId
+    paymentGateway
+    codPaid
+    amountPaid
+    amountDue
+    paymentMsg
+    paymentTime
+    paid
+    totalAmountRefunded
+    amount {
+      qty
+      subtotal
+      tax
+      discount
+      total
+      shipping
+    }
+    userFirstName
+    userLastName
+    userPhone
+    userEmail
+    addressId {
+      id
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    address {
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    store {
+      id
+      name
+      email
+    }
+    items {
+      id
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      barcode
+      img
+      slug
+      price
+      qty
+      shippingCharge
+      tax
+      time
+      options
+      brandName
+      brandImg
+      color
+      size
+      status
+      type
+      returnReason
+      vendor {
+        firstName
+        lastName
+        phone
+        address {
+          address
+        }
+        store
+      }
+      status
+      orderHistory {
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+      amountRefunded
+      refunds {
+        qty
+        amount
+        message
+        refundId
+        time
+      }
+    }
+    orderItems {
+      id
+      status
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      slug
+      img
+      tracking
+      shippingCharge
+      tax
+      brandName
+      brandImg
+      invoiceLink
+      returnValidTill
+      color
+      size
+      trackingId
+      returnTrackingId
+      courierName
+      returnCourierName
+      type
+      price
+      mrp
+      qty
+      subtotal
+      discount
+      totalDiscount
+      total
+      returnReason
+      vendorInfo {
+        firstName
+      }
+      orderHistory {
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+      amountRefunded
+      refunds {
+        amount
+        qty
+        message
+        refundId
+        time
+      }
+    }
+  }
+}

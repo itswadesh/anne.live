@@ -1,0 +1,52 @@
+mutation saveScheduleDemo(
+  $id: String!
+  $product: ID
+  $products: [ID]
+  $scheduleDateTime: String
+  $title: String
+  $img: String
+) {
+  saveScheduleDemo(
+    id: $id
+    product: $product
+    products: $products
+    scheduleDateTime: $scheduleDateTime
+    img: $img
+    title: $title
+  ) {
+    id
+    scheduleDateTime
+    title
+    img
+    product {
+      id
+      name
+      img
+      slug
+      price
+      mrp
+    }
+    products {
+      id
+      name
+      img
+      slug
+      price
+      mrp
+    }
+    user {
+      id
+      firstName
+      lastName
+      email
+      phone
+    }
+    users {
+      id
+      firstName
+      lastName
+      email
+      phone
+    }
+  }
+}

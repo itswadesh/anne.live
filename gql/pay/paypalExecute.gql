@@ -1,0 +1,5 @@
+mutation paypalExecute($paymentId: ID!, $payerId: String!) {
+  paypalExecute(paymentId: $paymentId, payerId: $payerId) {
+    id
+  }
+}

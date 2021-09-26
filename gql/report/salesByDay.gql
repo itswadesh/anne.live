@@ -1,0 +1,7 @@
+query salesByDay {
+  salesByDay {
+    _id
+    totalAmount
+    qty
+  }
+}

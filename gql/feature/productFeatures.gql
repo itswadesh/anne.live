@@ -1,0 +1,15 @@
+query productFeatures($product: ID!) {
+  productFeatures(product: $product) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      value
+      type
+      product
+      active
+    }
+  }
+}

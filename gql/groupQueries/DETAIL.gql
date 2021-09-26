@@ -1,0 +1,233 @@
+query DETAIL($id: ID!) {
+  product(id: $id) {
+    id
+    slug
+    name
+    description
+    type
+    price
+    mrp
+    discount
+    stock
+    tax
+    img
+    images
+    time
+    active
+    popularity
+    position
+    ratings
+    reviews
+    sku
+    hsn
+    group
+    barcode
+    gender
+    gtin
+    condition
+    trending
+    featured
+    hot
+    new
+    sale
+    recommended
+    title
+    itemId
+    warranty
+    metaDescription
+    keywords
+    ageMin
+    ageMax
+    ageUnit
+    styleCode
+    eanNo
+    articleCode
+    productMasterId
+    currency
+    manufacturer
+    countryOfOrigin
+    returnInfo
+    link
+    gender
+    condition
+    gtin
+    cgst
+    sgst
+    igst
+    sizechart
+    batchNo
+    mfgDate
+    expiryDate
+    sizeGroup {
+      _id
+      slug
+      size {
+        name
+      }
+    }
+    colorGroup {
+      _id
+      slug
+      color {
+        name
+        color_code
+      }
+    }
+    brand {
+      id
+      name
+    }
+    parentBrand {
+      id
+      name
+    }
+    color {
+      id
+      name
+    }
+    size {
+      id
+      name
+    }
+    category {
+      id
+      name
+      slug
+      pathA {
+        name
+        slug
+      }
+    }
+    categories {
+      id
+      name
+    }
+    categoryPool {
+      id
+      name
+    }
+    keyFeatures
+    features {
+      id
+      name
+      value
+    }
+    specifications {
+      id
+      name
+      value
+    }
+    productDetails {
+      id
+      name
+      value
+    }
+    channels {
+      id
+      title
+      img
+      scheduleDateTime
+      user {
+        firstName
+        lastName
+      }
+    }
+    collections {
+      id
+      name
+      description
+      active
+      images
+      img
+      q
+      sort
+      type
+    }
+    options {
+      id
+      name
+      type
+      default_option
+      values {
+        id
+        name
+        default
+      }
+    }
+    variants {
+      id
+      options {
+        name
+        val
+      }
+      stock
+      weight
+      length
+      width
+      height
+      barcode
+      sku
+      mrp
+      price
+      images
+      trackInventory
+      active
+      sort
+    }
+    vendor {
+      id
+      firstName
+      lastName
+      phone
+      email
+      address {
+        address
+      }
+      info {
+        store
+        storePhotos
+      }
+    }
+    relatedProducts {
+      id
+      name
+      slug
+      img
+    }
+    returnInfo
+    returnAllowed
+    replaceAllowed
+    returnValidityInDays
+    files
+    createdAt
+    updatedAt
+  }
+  product_group(id: $id) {
+    sizeGroup {
+      id
+      slug
+      stock
+      size {
+        id
+        name
+      }
+    }
+    colorGroup {
+      id
+      slug
+      stock
+      color {
+        id
+        name
+        color_code
+      }
+    }
+  }
+  checkWishlist(product: $id, variant: $id)
+  reviewSummary(pid: $id) {
+    avg
+    count
+    total
+    reviews
+  }
+}

@@ -1,0 +1,3 @@
+mutation removeOption($id: ID!) {
+  removeOption(id: $id)
+}

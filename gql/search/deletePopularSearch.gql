@@ -1,0 +1,3 @@
+mutation deletePopularSearch($id: ID!) {
+  deletePopularSearch(id: $id)
+}

@@ -1,0 +1,6 @@
+const shell = require('shelljs')
+shell.rm('-rf', 'node_modules/.cache')
+shell.cp('-R', 'config/anne/index.js', 'config/index.js')
+shell.cp('-R', 'config/anne/icon.png', 'static/icon.png')
+shell.cp('-R', 'config/anne/favicon.ico', 'static/favicon.ico')
+shell.cp('-R', 'devops/anne/pm2.config.js', 'prod/pm2.config.js')

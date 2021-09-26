@@ -1,0 +1,28 @@
+query optionValues(
+  $page: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $option_id: ID
+) {
+  optionValues(
+    page: $page
+    limit: $limit
+    search: $search
+    sort: $sort
+    option_id: $option_id
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      option_id
+      name
+      default
+      position
+      type
+      amount
+    }
+  }
+}

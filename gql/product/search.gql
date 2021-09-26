@@ -1,0 +1,55 @@
+query search(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $type: String
+  $city: String
+  $search: String
+  $sort: String
+  $q: String
+) {
+  search(
+    page: $page
+    q: $q
+    skip: $skip
+    limit: $limit
+    type: $type
+    city: $city
+    search: $search
+    sort: $sort
+  ) {
+    data {
+      id
+      slug
+      name
+      type
+      price
+      stock
+      img
+      time
+      ratings
+      reviews
+      trending
+      hot
+      sale
+      featured
+      recommended
+      new
+      vendor {
+        id
+        firstName
+        lastName
+        phone
+        email
+        avatar
+        info {
+          store
+          storePhotos
+        }
+      }
+    }
+    count
+    pageSize
+    page
+  }
+}

@@ -1,0 +1,48 @@
+mutation saveBusinessDetail(
+  $accountNo: Float
+  $bankName: String
+  $ifsc: String
+  $accountHolderName: String
+) {
+  saveBusinessDetail(
+    accountNo: $accountNo
+    bankName: $bankName
+    ifsc: $ifsc
+    accountHolderName: $accountHolderName
+  ) {
+    firstName
+    lastName
+    email
+    avatar
+    role
+    verified
+    gender
+    city
+    shippingCharges
+    freeShippingOn
+    address {
+      address
+      town
+      city
+      state
+      zip
+    }
+    info {
+      public
+      store
+    }
+    businessDetail {
+      bankName
+      accountNo
+      accountHolderName
+      ifsc
+    }
+  }
+}
+
+# {
+#     "ifsc": "u9878",
+#     "accountNo":3408890948093850,
+#     "accountHolderName": "prak",
+#     "bankName": "pnb"
+# }

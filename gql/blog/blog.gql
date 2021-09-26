@@ -1,0 +1,25 @@
+query blog($id: String!) {
+  blog(id: $id) {
+    id
+    title
+    slug
+    active
+    excerpt
+    content
+    published_at
+    img
+    createdAt
+    updatedAt
+    user {
+      firstName
+      lastName
+      avatar
+    }
+    store {
+      id
+      name
+      email
+      phone
+    }
+  }
+}

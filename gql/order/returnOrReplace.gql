@@ -1,0 +1,83 @@
+mutation returnOrReplace(
+  $orderId: ID!
+  $pId: String!
+  $reason: String!
+  $requestType: String!
+  $qty: Int
+) {
+  returnOrReplace(
+    orderId: $orderId
+    pId: $pId
+    reason: $reason
+    requestType: $requestType
+    qty: $qty
+  ) {
+    id
+    orderNo
+    otp
+    amount {
+      qty
+      subtotal
+      discount
+      shipping
+      total
+      tax
+    }
+    paymentOrderId
+    paymentMode
+    paymentAmount
+    paymentCurrency
+    paymentReferenceId
+    delivery {
+      otp
+    }
+    items {
+      status
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      slug
+      img
+      tracking
+      shippingCharge
+      tax
+      brandName
+      brandImg
+      parentBrandName
+      parentBrandImg
+    }
+    orderItems {
+      status
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      slug
+      img
+      tracking
+      shippingCharge
+      tax
+      brandName
+      brandImg
+      parentBrandName
+      parentBrandImg
+    }
+    address {
+      firstName
+      lastName
+      phone
+      lat
+      lng
+    }
+    createdAt
+    updatedAt
+  }
+}
+
+# {
+#   "orderId": "60e816e814c68f2458b595b2",
+#   "pId": "60e75ad10c33f8083050cfef",
+#   "requestType": "replace",
+#   "reason": "damaged"
+# }

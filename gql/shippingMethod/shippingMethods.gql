@@ -1,0 +1,18 @@
+query shippingMethods($page: Int, $search: String, $limit: Int, $sort: String) {
+  shippingMethods(page: $page, search: $search, limit: $limit, sort: $sort) {
+    count
+    page
+    pageSize
+    data {
+      id
+      carrierName
+      method
+      shippingNameAtCheckout
+      minWeight
+      maxWeight
+      amount
+      tableBasedOn
+      user
+    }
+  }
+}

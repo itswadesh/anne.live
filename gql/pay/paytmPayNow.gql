@@ -1,0 +1,5 @@
+mutation paytmPayNow($address: ID) {
+  paytmPayNow(address: $address) {
+    id
+  }
+}

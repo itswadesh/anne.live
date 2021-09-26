@@ -1,0 +1,8 @@
+query statusSummary {
+  statusSummary {
+    _id
+    count
+    amount
+    createdAt
+  }
+}

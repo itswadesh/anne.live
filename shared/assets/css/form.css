@@ -1,0 +1,921 @@
+/* Button Start  */
+.material-button-text {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+  min-width: 64px;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  background-color: transparent;
+  font-family: var(
+    --pure-material-font,
+    'Roboto',
+    'Segoe UI',
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+}
+
+.material-button-text::-moz-focus-inner {
+  border: none;
+}
+
+/* Overlay */
+.material-button-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Ripple */
+.material-button-text::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: currentColor;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+.material-button-text:hover::before {
+  opacity: 0.04;
+}
+
+.material-button-text:focus::before {
+  opacity: 0.12;
+}
+
+.material-button-text:hover:focus::before {
+  opacity: 0.16;
+}
+
+/* Active */
+.material-button-text:active::after {
+  opacity: 0.16;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+
+/* Disabled */
+.material-button-text:disabled {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  background-color: transparent;
+  cursor: initial;
+}
+
+.material-button-text:disabled::before {
+  opacity: 0;
+}
+
+.material-button-text:disabled::after {
+  opacity: 0;
+}
+/* Button End  */
+/* Button Start  */
+.material-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  min-width: 64px;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  background-color: goldenrod;
+  box-shadow: 0 0px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 0%);
+  font-family: var(
+    --pure-material-font,
+    'Roboto',
+    'Segoe UI',
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.material-button::-moz-focus-inner {
+  border: none;
+}
+
+/* Overlay */
+.material-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Ripple */
+.material-button::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px; /* Safari */
+  height: 32px; /* Safari */
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+.material-button:hover,
+.material-button:focus {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.material-button:hover::before {
+  opacity: 0.08;
+}
+
+.material-button:focus::before {
+  opacity: 0.24;
+}
+
+.material-button:hover:focus::before {
+  opacity: 0.3;
+}
+
+/* Active */
+.material-button:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.material-button:active::after {
+  opacity: 0.32;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+
+/* Disabled */
+.material-button:disabled {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+  box-shadow: none;
+  cursor: initial;
+}
+
+.material-button:disabled::before {
+  opacity: 0;
+}
+
+.material-button:disabled::after {
+  opacity: 0;
+}
+/* Button end */
+/* Checkbox start */
+.material-checkbox {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+  font-family: var(
+    --pure-material-font,
+    'Roboto',
+    'Segoe UI',
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Input */
+.material-checkbox > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  box-shadow: none;
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+/* Span */
+.material-checkbox > span {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Box */
+.material-checkbox > span::before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 3px 11px 3px 1px;
+  border: solid 2px; /* Safari */
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Checkmark */
+.material-checkbox > span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 10px;
+  height: 5px;
+  border: solid 2px transparent;
+  border-right: none;
+  border-top: none;
+  transform: translate(3px, 4px) rotate(-45deg);
+}
+
+/* Checked, Indeterminate */
+.material-checkbox > input:checked,
+.material-checkbox > input:indeterminate {
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.material-checkbox > input:checked + span::before,
+.material-checkbox > input:indeterminate + span::before {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.material-checkbox > input:checked + span::after,
+.material-checkbox > input:indeterminate + span::after {
+  border-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+}
+
+.material-checkbox > input:indeterminate + span::after {
+  border-left: none;
+  transform: translate(4px, 3px);
+}
+
+/* Hover, Focus */
+.material-checkbox:hover > input {
+  opacity: 0.04;
+}
+
+.material-checkbox > input:focus {
+  opacity: 0.12;
+}
+
+.material-checkbox:hover > input:focus {
+  opacity: 0.16;
+}
+
+/* Active */
+.material-checkbox > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.material-checkbox > input:active + span::before {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.material-checkbox > input:checked:active + span::before {
+  border-color: transparent;
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+}
+
+/* Disabled */
+.material-checkbox > input:disabled {
+  opacity: 0;
+}
+
+.material-checkbox > input:disabled + span {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  cursor: initial;
+}
+
+.material-checkbox > input:disabled + span::before {
+  border-color: currentColor;
+}
+
+.material-checkbox > input:checked:disabled + span::before,
+.material-checkbox > input:indeterminate:disabled + span::before {
+  border-color: transparent;
+  background-color: currentColor;
+}
+
+/* Checkbox end */
+/* Radio start */
+.material-radio {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+  font-family: var(
+    --pure-material-font,
+    'Roboto',
+    'Segoe UI',
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Input */
+.material-radio > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+/* Span */
+.material-radio > span {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Circle */
+.material-radio > span::before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 2px 10px 2px 0;
+  border: solid 2px; /* Safari */
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  transition: border-color 0.2s;
+}
+
+/* Check */
+.material-radio > span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  transform: translate(5px, 5px) scale(0);
+  transition: transform 0.2s;
+}
+
+/* Checked */
+.material-radio > input:checked {
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.material-radio > input:checked + span::before {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.material-radio > input:checked + span::after {
+  transform: translate(5px, 5px) scale(1);
+}
+
+/* Hover, Focus */
+.material-radio:hover > input {
+  opacity: 0.04;
+}
+
+.material-radio > input:focus {
+  opacity: 0.12;
+}
+
+.material-radio:hover > input:focus {
+  opacity: 0.16;
+}
+
+/* Active */
+.material-radio > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.material-radio > input:active + span::before {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+/* Disabled */
+.material-radio > input:disabled {
+  opacity: 0;
+}
+
+.material-radio > input:disabled + span {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  cursor: initial;
+}
+
+.material-radio > input:disabled + span::before {
+  border-color: currentColor;
+}
+
+.material-radio > input:disabled + span::after {
+  background-color: currentColor;
+}
+
+/* Radio end */
+/* Progress start */
+.material-progress-circular {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 50%;
+  padding: 0.25em;
+  width: 3em;
+  height: 3em;
+  color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  background-color: transparent;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.material-progress-circular::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+/* Indeterminate */
+.material-progress-circular:indeterminate {
+  -webkit-mask-image: linear-gradient(transparent 50%, black 50%),
+    linear-gradient(to right, transparent 50%, black 50%);
+  mask-image: linear-gradient(transparent 50%, black 50%),
+    linear-gradient(to right, transparent 50%, black 50%);
+  animation: material-progress-circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
+}
+
+:-ms-lang(x),
+.material-progress-circular:indeterminate {
+  animation: none;
+}
+
+.material-progress-circular:indeterminate::before,
+.material-progress-circular:indeterminate::-webkit-progress-value {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 0.25em;
+  border: solid 0.25em transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  width: 100% !important;
+  height: 100%;
+  background-color: transparent;
+  animation: material-progress-circular-pseudo 0.75s infinite linear alternate;
+}
+
+.material-progress-circular:indeterminate::-moz-progress-bar {
+  box-sizing: border-box;
+  border: solid 0.25em transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  animation: material-progress-circular-pseudo 0.75s infinite linear alternate;
+}
+
+.material-progress-circular:indeterminate::-ms-fill {
+  animation-name: -ms-ring;
+}
+
+@keyframes material-progress-circular {
+  0% {
+    transform: rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(180deg);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: rotate(630deg);
+  }
+  37.5% {
+    transform: rotate(810deg);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: rotate(1260deg);
+  }
+  62.5% {
+    transform: rotate(1440deg);
+    animation-timing-function: linear;
+  }
+  75% {
+    transform: rotate(1890deg);
+  }
+  87.5% {
+    transform: rotate(2070deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(2520deg);
+  }
+}
+
+@keyframes material-progress-circular-pseudo {
+  0% {
+    transform: rotate(-30deg);
+  }
+  29.4% {
+    border-left-color: transparent;
+  }
+  29.41% {
+    border-left-color: currentColor;
+  }
+  64.7% {
+    border-bottom-color: transparent;
+  }
+  64.71% {
+    border-bottom-color: currentColor;
+  }
+  100% {
+    border-left-color: currentColor;
+    border-bottom-color: currentColor;
+    transform: rotate(225deg);
+  }
+}
+/* Progress end */
+/* Textbox start */
+.material-textbox-outlined {
+  --pure-material-safari-helper1: rgb(
+    var(--pure-material-primary-rgb, 33, 150, 243)
+  );
+  position: relative;
+  display: inline-block;
+  padding-top: 6px;
+  font-family: var(
+    --pure-material-font,
+    'Roboto',
+    'Segoe UI',
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  line-height: 1;
+  overflow: hidden;
+}
+
+/* Input, Textarea */
+.material-textbox-outlined > input,
+.material-textbox-outlined > textarea {
+  box-sizing: border-box;
+  margin: 0;
+  border: solid 1px; /* Safari */
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  border-top-color: transparent;
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem 0.5rem;
+  width: 100%;
+  height: inherit;
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+  background-color: transparent;
+  box-shadow: none; /* Firefox */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* Span */
+.material-textbox-outlined > input + span,
+.material-textbox-outlined > textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  width: 100%;
+  max-height: 100%;
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  font-size: 75%;
+  line-height: 1rem;
+  cursor: text;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+/* Corners */
+.material-textbox-outlined > input + span::before,
+.material-textbox-outlined > input + span::after,
+.material-textbox-outlined > textarea + span::before,
+.material-textbox-outlined > textarea + span::after {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  margin-top: 6px;
+  border-top: solid 1px;
+  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  min-width: 10px;
+  height: 8px;
+  pointer-events: none;
+  box-shadow: inset 0 1px transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.material-textbox-outlined > input + span::before,
+.material-textbox-outlined > textarea + span::before {
+  margin-right: 4px;
+  border-left: solid 1px transparent;
+  border-radius: 4px 0;
+}
+
+.material-textbox-outlined > input + span::after,
+.material-textbox-outlined > textarea + span::after {
+  flex-grow: 1;
+  margin-left: 4px;
+  border-right: solid 1px transparent;
+  border-radius: 0 4px;
+}
+
+/* Hover */
+.material-textbox-outlined:hover > input,
+.material-textbox-outlined:hover > textarea {
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+  border-top-color: transparent;
+}
+
+.material-textbox-outlined:hover > input + span::before,
+.material-textbox-outlined:hover > textarea + span::before,
+.material-textbox-outlined:hover > input + span::after,
+.material-textbox-outlined:hover > textarea + span::after {
+  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+}
+
+.material-textbox-outlined:hover > input:not(:focus):placeholder-shown,
+.material-textbox-outlined:hover > textarea:not(:focus):placeholder-shown {
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+}
+
+/* Placeholder-shown */
+.material-textbox-outlined > input:not(:focus):placeholder-shown,
+.material-textbox-outlined > textarea:not(:focus):placeholder-shown {
+  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+}
+
+.material-textbox-outlined > input:not(:focus):placeholder-shown + span,
+.material-textbox-outlined > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 3rem;
+}
+
+.material-textbox-outlined > input:not(:focus):placeholder-shown + span::before,
+.material-textbox-outlined
+  > textarea:not(:focus):placeholder-shown
+  + span::before,
+.material-textbox-outlined > input:not(:focus):placeholder-shown + span::after,
+.material-textbox-outlined
+  > textarea:not(:focus):placeholder-shown
+  + span::after {
+  border-top-color: transparent;
+}
+
+/* Focus */
+.material-textbox-outlined > input:focus,
+.material-textbox-outlined > textarea:focus {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  border-top-color: transparent;
+  box-shadow: inset 1px 0 var(--pure-material-safari-helper1),
+    inset -1px 0 var(--pure-material-safari-helper1),
+    inset 0 -1px var(--pure-material-safari-helper1);
+  outline: none;
+}
+
+.material-textbox-outlined > input:focus + span,
+.material-textbox-outlined > textarea:focus + span {
+  color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.material-textbox-outlined > input:focus + span::before,
+.material-textbox-outlined > input:focus + span::after,
+.material-textbox-outlined > textarea:focus + span::before,
+.material-textbox-outlined > textarea:focus + span::after {
+  border-top-color: var(--pure-material-safari-helper1) !important;
+  box-shadow: inset 0 1px var(--pure-material-safari-helper1);
+}
+
+/* Disabled */
+.material-textbox-outlined > input:disabled,
+.material-textbox-outlined > input:disabled + span,
+.material-textbox-outlined > textarea:disabled,
+.material-textbox-outlined > textarea:disabled + span {
+  border-color: rgba(
+    var(--pure-material-onsurface-rgb, 0, 0, 0),
+    0.38
+  ) !important;
+  border-top-color: transparent !important;
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  pointer-events: none;
+}
+
+.material-textbox-outlined > input:disabled + span::before,
+.material-textbox-outlined > input:disabled + span::after,
+.material-textbox-outlined > textarea:disabled + span::before,
+.material-textbox-outlined > textarea:disabled + span::after {
+  border-top-color: rgba(
+    var(--pure-material-onsurface-rgb, 0, 0, 0),
+    0.38
+  ) !important;
+}
+
+.material-textbox-outlined > input:disabled:placeholder-shown,
+.material-textbox-outlined > input:disabled:placeholder-shown + span,
+.material-textbox-outlined > textarea:disabled:placeholder-shown,
+.material-textbox-outlined > textarea:disabled:placeholder-shown + span {
+  border-top-color: rgba(
+    var(--pure-material-onsurface-rgb, 0, 0, 0),
+    0.38
+  ) !important;
+}
+
+.material-textbox-outlined > input:disabled:placeholder-shown + span::before,
+.material-textbox-outlined > input:disabled:placeholder-shown + span::after,
+.material-textbox-outlined > textarea:disabled:placeholder-shown + span::before,
+.material-textbox-outlined > textarea:disabled:placeholder-shown + span::after {
+  border-top-color: transparent !important;
+}
+
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .material-textbox-outlined > input,
+    .material-textbox-outlined > input + span,
+    .material-textbox-outlined > textarea,
+    .material-textbox-outlined > textarea + span,
+    .material-textbox-outlined > input + span::before,
+    .material-textbox-outlined > input + span::after,
+    .material-textbox-outlined > textarea + span::before,
+    .material-textbox-outlined > textarea + span::after {
+      transition-duration: 0.1s;
+    }
+  }
+}
+/* Textbox end */
+
+/* Linear Progress Bar */
+.progress,
+progress[value] {
+  width: 100%;
+  border: none;
+  margin: 5px 0;
+  height: 5px;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.progress::-webkit-progress-bar,
+progress[value]::-webkit-progress-bar {
+  background-color: #e2ecfe;
+}
+.progress::-webkit-progress-value,
+progress[value]::-webkit-progress-value {
+  background-color: #387ef5;
+}
+.progress-materializecss {
+  margin: 5px 0;
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #e2ecfe;
+  border-radius: 2px;
+  margin: 0.5rem 0 1rem 0;
+  overflow: hidden;
+}
+.progress-materializecss .indeterminate {
+  background-color: #387ef5;
+}
+.progress-materializecss .indeterminate:before {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+.progress-materializecss .indeterminate:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    infinite;
+  animation-delay: 1.15s;
+}
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+/* End Linear Progress  */

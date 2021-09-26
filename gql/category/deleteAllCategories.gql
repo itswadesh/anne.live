@@ -1,0 +1,7 @@
+mutation deleteAllCategories($password: String!) {
+  deleteAllCategories(password: $password)
+}
+
+# {
+#   "password": "prakash"
+# }

@@ -1,0 +1,56 @@
+mutation addToCart(
+  $qty: Int!
+  $pid: ID!
+  $vid: ID
+  $options: String
+  $vendor: ID
+  $replace: Boolean
+) {
+  addToCart(
+    qty: $qty
+    pid: $pid
+    vid: $vid
+    options: $options
+    vendor: $vendor
+    replace: $replace
+  ) {
+    items {
+      pid
+      vid
+      barcode
+      name
+      slug
+      qty
+      price
+      shippingCharge
+      tax
+      img
+      options
+      brandName
+      vendorFirstName
+      vendorLastName
+      vendorPhone
+    }
+    qty
+    subtotal
+    discount {
+      code
+      value
+      text
+      amount
+    }
+    shipping {
+      charge
+    }
+    tax
+    total
+  }
+}
+
+# for multiple vendor in futute
+# {
+#   "options": "null",
+#   "pid": "610ff516c5d99b257820d6d5",
+#   "qty": 1,
+#   "vid": "610ff516c5d99b257820d6d5"
+# }

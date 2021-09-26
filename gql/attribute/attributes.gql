@@ -1,0 +1,29 @@
+query attributes(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  attributes(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      show
+      category
+      active
+      createdAt
+      updatedAt
+      store
+    }
+  }
+}

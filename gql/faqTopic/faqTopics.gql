@@ -1,0 +1,17 @@
+query faqTopics($page: Int, $search: String, $limit: Int, $sort: String) {
+  faqTopics(page: $page, search: $search, limit: $limit, sort: $sort) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      for
+      uid
+      active
+      q
+      createdAt
+      updatedAt
+    }
+  }
+}

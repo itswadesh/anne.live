@@ -1,0 +1,3 @@
+query isSubscribed($subscriptionId: ID) {
+  isSubscribed(subscriptionId: $subscriptionId)
+}

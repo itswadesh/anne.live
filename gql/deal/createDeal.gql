@@ -1,0 +1,37 @@
+mutation createDeal(
+  $name: String
+  $startTime: String
+  $endTime: String
+  $startTimeISO: String
+  $endTimeISO: String
+  $onGoing: Boolean
+  $products: [String]
+  $dealStatus: Boolean
+  $active: Boolean
+  $store: ID
+) {
+  createDeal(
+    name: $name
+    startTime: $startTime
+    endTime: $endTime
+    startTimeISO: $startTimeISO
+    endTimeISO: $endTimeISO
+    onGoing: $onGoing
+    products: $products
+    dealStatus: $dealStatus
+    active: $active
+    store: $store
+  ) {
+    id
+    name
+    startTime
+    endTime
+    startTimeISO
+    endTimeISO
+    onGoing
+    products
+    dealStatus
+    active
+    store
+  }
+}
