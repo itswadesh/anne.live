@@ -2,13 +2,14 @@ import { I18N } from './config/lang'
 import { firebaseConfig } from './config/firebase'
 import {
   HTTP_ENDPOINT,
+  DOMAIN,
   WWW_URL,
   head,
   tailwindcss,
   PORT,
 } from './shared/config/index'
 import { pwa } from './config/index'
-console.log('zzzzzzzzzzzzzzzzzzzzzzzzzzz', HTTP_ENDPOINT, WWW_URL)
+console.log('zzzzzzzzzzzzzzzzzzzzzzzzzzz', HTTP_ENDPOINT, WWW_URL, DOMAIN)
 // const whitelist = ['preview-img-item']
 const whitelistPatterns = [/^slick-/, /^swal2-/, /^mx-/] // mx- is for vue2-datepicker
 export default {
@@ -68,6 +69,7 @@ export default {
   publicRuntimeConfig: {
     WWW_URL: `${WWW_URL}`,
     HTTP_ENDPOINT: `${HTTP_ENDPOINT}`,
+    DOMAIN: `${DOMAIN}`,
   },
   privateRuntimeConfig: {
     firebaseAppId: process.env.FIREBASE_APP_ID,

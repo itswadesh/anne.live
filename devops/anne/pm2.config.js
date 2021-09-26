@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'anne.biz:5500',
+      name: 'live.anne.biz:5505',
       script: 'npm',
       automation: false,
       args: 'start',

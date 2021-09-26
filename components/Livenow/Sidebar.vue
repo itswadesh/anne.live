@@ -53,7 +53,7 @@
     <div class="p-4 m-2 bg-white rounded-md shadow-md">
       <h1 class="text-xl font-bold tracking-wide uppercase">
         join the
-        <span class="text-purple-500 cursor-pointer">litekart</span>
+        <span class="text-purple-500 cursor-pointer">{{ store.name }}</span>
         community!!!
       </h1>
       <h5 class="mt-1 text-gray-600">
@@ -85,6 +85,11 @@
 export default {
   data() {
     return {}
+  },
+  computed: {
+    store() {
+      return this.$store.state.store || {}
+    },
   },
 }
 </script>

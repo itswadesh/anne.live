@@ -1,3 +1,4 @@
+import { DOMAIN } from '~/shared/config/index'
 import STORE_ONE from '~/gql/store/storeOne.gql'
 import SETTINGS from '~/gql/settings/settings.gql'
 import MEGAMENU from '~/gql/category/megamenu.gql'
@@ -55,6 +56,7 @@ export default {
       const popularSearches = som.popularSearches
       const cart = som.cart
       const me = som.me
+
       commit('settings', settings)
       commit('megamenu', megamenu)
       commit('popularSearches', popularSearches) // We don't want it here because it will slowdown initial load
@@ -135,7 +137,7 @@ export default {
     // app.router.base = params.store || '/'
     // console.log('nuxtServerInit')
     // await dispatch('fetch', domain.hostname)
-    await dispatch('fetchOnce', domain.hostname)
+    await dispatch('fetchOnce', DOMAIN || domain.hostname)
     // await dispatch('auth/fetch', domain.hostname)
     // await dispatch('cart/fetch', domain.hostname)
   },
