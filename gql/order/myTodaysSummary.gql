@@ -1,7 +1,0 @@
-query myTodaysSummary {
-  myTodaysSummary {
-    count
-    amount
-    createdAt
-  }
-}

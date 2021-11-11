@@ -1,3 +1,0 @@
-mutation fbInsertProduct($productId: ID!) {
-  fbInsertProduct(productId: $productId)
-}

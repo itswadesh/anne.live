@@ -1,5 +1,0 @@
-query validateCart {
-  validateCart
-  validateCoupon
-  shutter
-}

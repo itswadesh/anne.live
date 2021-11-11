@@ -1,8 +1,0 @@
-mutation singleUpload($file: Upload!, $folder: String, $productId: ID) {
-  singleUpload(file: $file, folder: $folder, productId: $productId) {
-    filename
-    mimetype
-    encoding
-    url
-  }
-}

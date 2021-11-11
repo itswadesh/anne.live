@@ -1,3 +1,0 @@
-mutation removeVariant($id: ID!) {
-  removeVariant(id: $id)
-}

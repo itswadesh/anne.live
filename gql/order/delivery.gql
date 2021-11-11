@@ -1,8 +1,0 @@
-query delivery {
-  statusSummary {
-    _id
-    amount
-    count
-    createdAt
-  }
-}

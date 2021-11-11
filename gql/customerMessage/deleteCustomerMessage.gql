@@ -1,3 +1,0 @@
-mutation deleteCustomerMessage($id: ID!) {
-  deleteCustomerMessage(id: $id)
-}

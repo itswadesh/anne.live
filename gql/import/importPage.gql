@@ -1,3 +1,0 @@
-mutation importPage($file: Upload!) {
-  importPage(file: $file)
-}

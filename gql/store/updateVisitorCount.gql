@@ -1,3 +1,0 @@
-mutation updateVisitorCount($store: ID!) {
-  updateVisitorCount(store: $store)
-}

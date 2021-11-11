@@ -1,7 +1,0 @@
-query salesByMonth {
-  salesByMonth {
-    _id
-    totalAmount
-    qty
-  }
-}

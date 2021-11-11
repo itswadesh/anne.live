@@ -1,3 +1,0 @@
-mutation deleteDiscount($id: ID!) {
-  deleteDiscount(id: $id)
-}

@@ -1,3 +1,0 @@
-query isSubscribed($pid: ID) {
-  isSubscribed(pid: $pid)
-}

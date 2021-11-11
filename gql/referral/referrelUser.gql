@@ -1,9 +1,0 @@
-mutation{
-  referrelUser(referralCode:"RXxk1",phone:"9694039043"){
-    id
-    phone
-    referralCode
-    referedFrom
-    referedUsers
-  }
-}

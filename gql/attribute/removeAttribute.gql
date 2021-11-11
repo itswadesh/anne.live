@@ -1,3 +1,0 @@
-mutation removeAttribute($id: ID!) {
-  removeAttribute(id: $id)
-}

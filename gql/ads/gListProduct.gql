@@ -1,7 +1,0 @@
-query gListProduct($authCode: String!) {
-  gListProduct(authCode: $authCode) {
-    id
-    name
-    slug
-  }
-}

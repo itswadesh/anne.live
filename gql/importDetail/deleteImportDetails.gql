@@ -1,7 +1,0 @@
-mutation deleteImportDetails($type: String!) {
-  deleteImportDetails(type: $type)
-}
-
-# {
-#   "type": "product"
-# }

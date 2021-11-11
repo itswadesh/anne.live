@@ -1,3 +1,0 @@
-mutation importUser($file: Upload!) {
-  importUser(file: $file)
-}

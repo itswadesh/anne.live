@@ -1,9 +1,0 @@
-query vendorSummary {
-  vendorSummary {
-    _id
-    count
-    amount
-    createdAt
-    codPaid
-  }
-}

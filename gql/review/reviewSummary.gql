@@ -1,8 +1,0 @@
-query reviewSummary($pid: ID!) {
-  reviewSummary(pid: $pid) {
-    avg
-    count
-    total
-    reviews
-  }
-}

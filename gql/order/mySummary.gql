@@ -1,7 +1,0 @@
-query data {
-  mySummary {
-    count
-    amount
-    createdAt
-  }
-}

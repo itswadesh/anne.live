@@ -1,3 +1,0 @@
-mutation deleteChannel($id: ID!) {
-  deleteChannel(id: $id)
-}

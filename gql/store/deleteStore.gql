@@ -1,3 +1,0 @@
-mutation deleteStore($id: ID!) {
-  deleteStore(id: $id)
-}

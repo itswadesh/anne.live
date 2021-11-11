@@ -1,8 +1,0 @@
-mutation assignRole($userId: ID!, $roleIds: [ID!]!) {
-  assignRole(userId: $userId, roleIds: $roleIds) {
-    id
-    firstName
-    lastName
-    roles
-  }
-}

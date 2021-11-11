@@ -1,7 +1,0 @@
-query Slots {
-  slots {
-    id
-    slug
-    name
-  }
-}

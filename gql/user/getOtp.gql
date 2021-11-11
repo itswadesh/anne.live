@@ -1,6 +1,0 @@
-mutation getOtp($phone: String!, $role: String) {
-  getOtp(phone: $phone, role: $role) {
-    otp
-    timer
-  }
-}

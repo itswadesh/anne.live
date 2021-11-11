@@ -1,8 +1,0 @@
-query getLocationFromZip($zip: Int!) {
-  getLocationFromZip(zip: $zip) {
-    zip
-    state
-    city
-    country
-  }
-}

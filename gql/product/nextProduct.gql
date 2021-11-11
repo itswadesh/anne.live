@@ -1,5 +1,0 @@
-query nextProduct($id: ID!) {
-  nextProduct(id: $id) {
-    id
-  }
-}

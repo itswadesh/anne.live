@@ -1,7 +1,0 @@
-query neteaseToken($channel: String) {
-  neteaseToken(channel: $channel) {
-    uid
-    token
-    appkey
-  }
-}

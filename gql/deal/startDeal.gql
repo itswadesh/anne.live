@@ -1,3 +1,0 @@
-query startDeal($id: ID!) {
-  startDeal(id: $id)
-}

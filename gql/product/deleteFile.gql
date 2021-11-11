@@ -1,5 +1,0 @@
-mutation deleteFile($url: String) {
-  deleteFile(url: $url) {
-    url
-  }
-}

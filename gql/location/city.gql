@@ -1,9 +1,0 @@
-query city($id: String!) {
-  city(id: $id) {
-    id
-    name
-    active
-    lat
-    lng
-  }
-}

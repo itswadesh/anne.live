@@ -1,3 +1,0 @@
-mutation paySuccessPageHit($id: ID!) {
-  paySuccessPageHit(id: $id)
-}

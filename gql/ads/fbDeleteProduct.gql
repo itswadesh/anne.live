@@ -1,3 +1,0 @@
-mutation fbDeleteProduct($productId: String!) {
-  fbDeleteProduct(productId: $productId)
-}

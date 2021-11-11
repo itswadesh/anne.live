@@ -1,3 +1,0 @@
-mutation removeUnit($id: ID!) {
-  removeUnit(id: $id)
-}

@@ -1,7 +1,0 @@
-query productsSync {
-  productsSync
-}
-
-query productsEsTruncate {
-  productsEsTruncate
-}

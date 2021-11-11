@@ -1,5 +1,0 @@
-query prevProduct($id: ID!) {
-  prevProduct(id: $id) {
-    id
-  }
-}
