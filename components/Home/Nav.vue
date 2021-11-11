@@ -159,7 +159,7 @@
             <div class="hidden text-sm lg:block">Profile</div>
           </nuxt-link>
 
-          <nuxt-link class="w-auto" :to="localePath('/my/wishlist')">
+          <!-- <nuxt-link class="w-auto" :to="localePath('/my/wishlist')">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 mx-auto"
@@ -216,7 +216,7 @@
             </svg>
 
             <div class="hidden text-sm lg:block">Cart</div>
-          </nuxt-link>
+          </nuxt-link> -->
         </div>
 
         <!--right header with icons block end -->
