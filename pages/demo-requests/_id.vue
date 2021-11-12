@@ -20,13 +20,18 @@
         <span class="loading-text" v-show="isDesc">{{ desc }}</span>
       </div> -->
     </div>
-    <ul class="tab-bar">
-      <li
+    <ul v-if="uid" class="absolute top-0 mt-32">
+      <!-- <li
         :class="{ silence: true, isSilence }"
         @click="setOrRelieveSilence"
-      ></li>
-      <li class="over" @click="stop"></li>
-      <li :class="{ stop: true, isStop }" @click="stopOrOpenVideo"></li>
+      ></li> -->
+      <li v-if="!started" class="bg-red-500 text-white px-4 py-2 rounded">
+        <button @click="start">Start</button>
+      </li>
+      <li v-if="started" class="bg-red-500 text-white px-4 py-2 rounded">
+        <button @click="stop">Stop</button>
+      </li>
+      <!-- <li :class="{ stop: true, isStop }" @click="stopOrOpenVideo"></li> -->
     </ul>
   </div>
 </template>
@@ -35,9 +40,14 @@ import NETEASE_TOKEN from '~/gql/channel/neteaseToken.gql'
 import netease from '~/mixins/netease'
 
 export default {
-  name: 'Single',
   mixins: [netease],
   middleware: ['isAuth'],
+  data() {
+    return {
+      uid: null,
+      started: false,
+    }
+  },
   async mounted() {
     console.warn('Initialize audio and video')
     const channel = this.$route.params.id
@@ -48,30 +58,25 @@ export default {
         fetchPolicy: 'no-cache',
       })
     ).data.neteaseToken
+    this.uid = uid
     window.self = this
     await this.createClient(appkey) // Step-2
     await this.subscribeToStreams()
     await this.joinChannel(token, uid, channel)
     await this.initLocalStream(uid) // Step-3A
-    await this.publish() // Step-3(B)
   },
 
   methods: {
-    stop() {
-      this.handleOver()
+    async start() {
+      await this.publish() // Step-3(B)
+      this.started = true
+    },
+    async stop() {
+      await this.handleOver()
+      this.started = false
+      // this.$router.push('/')
       this.$router.go(-1)
     },
-    //   publish() {
-    //     console.warn('Start publishing video stream')
-    //     this.client
-    //       .publish(this.localStream)
-    //       .then(() => {
-    //         console.warn('Local publish successfully')
-    //       })
-    //       .catch((err) => {
-    //         console.error('Local publish failed: ', err)
-    //       })
-    //   },
   },
 }
 </script>

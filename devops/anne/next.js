@@ -2,8 +2,8 @@ const shell = require('shelljs')
 require('dotenv').config()
 
 // Start Config
-const PM2_NAME = 'anne.biz:5500'
-const REMOTE_DIR = '/var/www/anne/www'
+const PM2_NAME = 'live.anne.biz:5505'
+const REMOTE_DIR = '/var/www/anne/live'
 const REMOTE_HOST = '143.110.244.136'
 const REMOTE_USER = 'root'
 const PRIVATE_KEY = process.env.LIVE_KEY

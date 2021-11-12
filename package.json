@@ -20,6 +20,8 @@
     "anne-copy": "node devops/anne/copy",
     "anne-deploy": "node devops/anne/deploy",
     "anne": "run-s anne-copy-config build anne-copy anne-deploy",
+    "anne-deploy-next": "node devops/anne/next",
+    "next-anne": "run-s anne-copy-config build anne-copy anne-deploy-next",
     "anne-deploy-live": "node devops/anne/live",
     "live-anne": "run-s anne-copy-config build anne-copy anne-deploy-live",
     "live": "run-s live-anne",
@@ -129,6 +131,7 @@
     "postcss": "^8.3.0",
     "prettier": "^2.3.0",
     "shelljs": "^0.8.4",
+    "ssh2shell": "^1.9.8",
     "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0"
