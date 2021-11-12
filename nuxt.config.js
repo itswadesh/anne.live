@@ -42,7 +42,6 @@ export default {
     'nuxt-purgecss',
     'nuxt-webfontloader',
     // '@nuxtjs/google-analytics',
-    '@nuxt/image',
     '@nuxtjs/pwa',
     'vue-social-sharing/nuxt',
     // 'nuxt-vite',
