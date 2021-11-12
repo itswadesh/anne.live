@@ -1,5 +1,4 @@
 import { I18N } from './config/lang'
-import { firebaseConfig } from './config/firebase'
 import {
   HTTP_ENDPOINT,
   DOMAIN,
@@ -17,7 +16,7 @@ export default {
     host: '0.0.0.0',
     port: PORT,
   },
-  // ssr: false,
+  ssr: false,
   head,
   css: [
     '~/shared/assets/css/form.css',
@@ -30,13 +29,10 @@ export default {
     { src: '~/plugins/scroll.js', ssr: false },
     { src: '~/plugins/filters.js' },
     { src: '~/plugins/VueYoutube.js', ssr: false },
-    // { src: '~/plugins/zoom.js', ssr: false },
-    // { src: '~/plugins/agora.js', ssr: false },
+    { src: '~/plugins/init.js', ssr: false },
     { src: '~/plugins/dir', ssr: true },
     { src: '~/plugins/gtag', ssr: false },
     { src: '~/plugins/api.js' },
-    // { src: '~/plugins/init', ssr: false },
-    // { src: '~/plugins/directives.js', ssr:false },
   ],
   // components: true,
   buildModules: [
@@ -64,15 +60,11 @@ export default {
     'cookie-universal-nuxt',
     'vue-sweetalert2/nuxt',
     ['nuxt-i18n', I18N],
-    ['@nuxtjs/firebase', firebaseConfig],
   ],
   publicRuntimeConfig: {
     WWW_URL: `${WWW_URL}`,
     HTTP_ENDPOINT: `${HTTP_ENDPOINT}`,
     DOMAIN: `${DOMAIN}`,
-  },
-  privateRuntimeConfig: {
-    firebaseAppId: process.env.FIREBASE_APP_ID,
   },
   pageTransition: 'slide-bottom',
   layoutTransition: 'slide-bottom',
@@ -118,19 +110,5 @@ export default {
     '/api': HTTP_ENDPOINT,
     '/auth': HTTP_ENDPOINT,
     '/images': HTTP_ENDPOINT,
-  },
-  build: {
-    babel: {
-      presets({ isServer }) {
-        const targets = isServer ? { node: 'current' } : { ie: 11 }
-        return [[require.resolve('@babel/preset-env'), { targets }]]
-      },
-      plugins: [
-        '@babel/syntax-dynamic-import',
-        '@babel/transform-runtime',
-        '@babel/transform-async-to-generator',
-      ],
-    },
-    parallel: true,
   },
 }

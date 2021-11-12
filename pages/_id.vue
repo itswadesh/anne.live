@@ -18,10 +18,11 @@
     <div v-if="channel && channel.products && channel.products.length > 0">
       <h2 class="font-bold text-xl my-4 ms-2">Products</h2>
       <div class="flex flex-wrap">
-        <nuxt-link
+        <a
           v-for="p in channel.products"
           :key="p.id"
-          :to="`/${p.slug}?id=${p.id}`"
+          :href="`https://${DOMAIN}/${p.slug}?id=${p.id}`"
+          target="_blank"
           class="
             relative
             m-1
@@ -50,7 +51,7 @@
               {{ p.name }}
             </p>
           </div>
-        </nuxt-link>
+        </a>
       </div>
       <!-- <Chats :channel="$route.params.id" class="my-4" /> -->
     </div>
@@ -61,11 +62,12 @@
 import HlsPlayer from '~/components/Video/HlsPlayer.vue'
 import Chats from '~/components/Chats'
 import NuxtLink from '~/components/NuxtLink.vue'
-
+import { DOMAIN } from '~/shared/config/'
 export default {
   components: { HlsPlayer, Chats, NuxtLink },
   data() {
     return {
+      DOMAIN,
       channel: null,
     }
   },

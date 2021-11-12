@@ -29,11 +29,11 @@ export const { GOOGLE_MAPS_KEY = '' } = process.env
 export const { HERE_KEY } = process.env
 
 export const dev = process.env.NODE_ENV !== 'production'
-export const { HTTP_ENDPOINT = 'https://api.misiki.in' } = process.env
-export const { DOMAIN = 'misiki.in' } = process.env
+export const { HTTP_ENDPOINT = 'https://api.anne.biz' } = process.env
+export const { DOMAIN = 'anne.biz' } = process.env
 export const NETEASE_WWW = dev
   ? 'http://localhost:3300'
-  : 'https://litekartlive.netlify.app'
+  : 'https://live.anne.biz'
 
 export const { AGORA_APP_ID = 'AGORA_APP_ID' } = process.env
 export const { AGORA_APP_TOKEN = 'AGORA_APP_TOKEN' } = process.env
