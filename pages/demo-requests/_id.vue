@@ -1,7 +1,8 @@
 <template>
-  <div class="wrapper">
-    <div class="content relative">
+  <div class="wrapper relative">
+    <div class="content">
       <div ref="large" class="main-window"></div>
+
       <div class="absolute top-1 right-1">
         <template v-if="remoteStreams.length">
           <div
@@ -12,42 +13,65 @@
             :data-uid="item.getId()"
           ></div>
         </template>
+
         <div v-else ref="small" class="sub-window">
           <span class="loading-text">Waiting for others to join</span>
         </div>
       </div>
+
       <!-- <div class="sub-window" ref="small">
         <span class="loading-text" v-show="isDesc">{{ desc }}</span>
       </div> -->
     </div>
-    <ul v-if="uid" class="absolute top-0 mt-32">
+
+    <div
+      v-if="uid"
+      class="
+        absolute
+        bottom-5
+        inset-x-0
+        flex
+        items-center
+        justify-center
+        text-white
+        tracking-wide
+        font-semibold
+      "
+    >
       <!-- <li
         :class="{ silence: true, isSilence }"
         @click="setOrRelieveSilence"
       ></li> -->
-      <li v-if="!started" class="bg-red-500 text-white px-4 py-2 rounded">
+
+      <div v-if="!started" class="bg-success px-6 py-2 rounded-full">
         <button @click="start">Start</button>
-      </li>
-      <li v-if="started" class="bg-red-500 text-white px-4 py-2 rounded">
+      </div>
+
+      <div v-if="started" class="bg-error px-6 py-2 rounded-full">
         <button @click="stop">Stop</button>
-      </li>
+      </div>
+
       <!-- <li :class="{ stop: true, isStop }" @click="stopOrOpenVideo"></li> -->
-    </ul>
+    </div>
   </div>
 </template>
+
 <script>
 import NETEASE_TOKEN from '~/gql/channel/neteaseToken.gql'
 import netease from '~/mixins/netease'
 
 export default {
   mixins: [netease],
+
   middleware: ['isAuth'],
+
   data() {
     return {
       uid: null,
       started: false,
     }
   },
+
   async mounted() {
     console.warn('Initialize audio and video')
     const channel = this.$route.params.id
@@ -83,21 +107,24 @@ export default {
 
 <style scoped>
 .wrapper {
-  height: 92vh;
+  height: 88vh;
   background-image: linear-gradient(179deg, #141417 0%, #181824 100%);
   display: flex;
   flex-direction: column;
 }
+
 .wrapper .content {
   flex: 1;
   position: relative;
 }
+
 .wrapper .content .main-window {
   height: 100%;
   width: 67vh;
   margin: 0 auto;
   background: #25252d;
 }
+
 .wrapper .content .sub-window {
   width: 165px;
   height: 95px;
@@ -107,6 +134,7 @@ export default {
   top: 16px;
   border: 1px solid #ffffff;
 }
+
 .wrapper .content .sub-window .loading-text {
   display: block;
   width: 100%;
@@ -116,6 +144,7 @@ export default {
   color: #fff;
   font-weight: 400;
 }
+
 .wrapper .tab-bar {
   height: 54px;
   background-image: linear-gradient(180deg, #292933 7%, #212129 100%);
@@ -126,6 +155,7 @@ export default {
   align-items: center;
   color: #fff;
 }
+
 .wrapper .tab-bar li {
   height: 54px;
   width: 125px;
@@ -135,58 +165,72 @@ export default {
   background: url('/live-icons/silence.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.silence:hover {
   background: url('/live-icons/silence-hover.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.silence:active {
   background: url('/live-icons/silence-click.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.silence.isSilence {
   background: url('/live-icons/relieve-silence.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.silence.isSilence:hover {
   background: url('/live-icons/relieve-silence-hover.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.silence.isSilence:active {
   background: url('/live-icons/relieve-silence-click.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.over {
   background: url('/live-icons/over.png') no-repeat center;
   background-size: 68px 36px;
 }
+
 .wrapper .tab-bar li.over:hover {
   background: url('/live-icons/over-hover.png') no-repeat center;
   background-size: 68px 36px;
 }
+
 .wrapper .tab-bar li.over:active {
   background: url('/live-icons/over-click.png') no-repeat center;
   background-size: 68px 36px;
 }
+
 .wrapper .tab-bar li.stop {
   background: url('/live-icons/stop.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.stop:hover {
   background: url('/live-icons/stop-hover.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.stop:active {
   background: url('/live-icons/stop-click.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.stop.isStop {
   background: url('/live-icons/open.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.stop.isStop:hover {
   background: url('/live-icons/open-hover.png') no-repeat center;
   background-size: 60px 54px;
 }
+
 .wrapper .tab-bar li.stop.isStop:active {
   background: url('/live-icons/open-click.png') no-repeat center;
   background-size: 60px 54px;

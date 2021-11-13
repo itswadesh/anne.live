@@ -49,25 +49,27 @@
             hover:border-blue-500
           "
         >
+          <!-- v-lazy="`${p.img}?tr=h-144,w-144,fo-auto`" -->
           <img
-            v-lazy="p.img"
-            alt=""
+            :src="p.img"
+            alt="product"
             class="h-full w-full object-contain object-top"
           />
 
-          <div class="absolute bottom-0 w-full">
-            <p
-              class="
-                text-xs text-black
-                h-10
-                flex
-                frosted
-                text-center
-                justify-center
-                items-center
-                px-1
-              "
-            >
+          <div
+            class="
+              absolute
+              bottom-0
+              w-full
+              overflow-ellipsis
+              h-10
+              flex
+              frosted
+              justify-center
+              items-center
+            "
+          >
+            <p class="text-xs text-black line-clamp-2 text-center px-1">
               {{ p.name }}
             </p>
           </div>
