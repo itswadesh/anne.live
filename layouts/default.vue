@@ -41,7 +41,7 @@
       </div>
 
       <div v-else>
-        <Nav class="fixed top-0 z-50 w-full" @showLogin="showLogin" />
+        <NavLanding class="fixed top-0 z-50 w-full" @showLogin="showLogin" />
         <div :class="settings.id ? 'mt-rem' : 'mt-noSettingID'">
           <Nuxt class="w-full" />
         </div>
@@ -59,12 +59,18 @@
 </template>
 <script>
 import OtpLogin from '~/components/Login/Mobile/OtpLogin.vue'
-import Nav from '~/components/Home/Nav.vue'
+import NavLanding from '~/components/Home/NavLanding.vue'
 import WhiteFooter from '~/components/Island/WhiteFooter.vue'
 import { Modal } from '~/shared/components/ui'
 import PrimaryButtonRounded from '~/components/ui/PrimaryButtonRounded.vue'
 export default {
-  components: { Nav, OtpLogin, WhiteFooter, Modal, PrimaryButtonRounded },
+  components: {
+    NavLanding,
+    OtpLogin,
+    WhiteFooter,
+    Modal,
+    PrimaryButtonRounded,
+  },
   data() {
     return {
       showLoginModal: false,
@@ -93,7 +99,7 @@ export default {
 <style scoped>
 @media (max-width: 1024px) {
   .mt-rem {
-    margin-top: 3.55rem;
+    margin-top: 4.55rem;
   }
 }
 @media (min-width: 1024px) {
@@ -103,7 +109,7 @@ export default {
 }
 @media (max-width: 1024px) {
   .mt-noSettingID {
-    margin-top: 5.7rem;
+    margin-top: 6.7rem;
   }
 }
 @media (min-width: 1024px) {
