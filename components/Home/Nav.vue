@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-white shadow frosted">
+  <section class="flex flex-col bg-white shadow frosted">
     <div
       v-if="!settings.id"
       class="
@@ -15,75 +15,73 @@
       We are upgrading. Will not take much time.
     </div>
 
-    <header class="z-40 w-full h-24 p-2 shadow-xs sm:shadow-md lg:p-3 lg:h-16">
-      <div class="relative flex justify-between mx-auto xl:container">
-        <div class="flex flex-row items-center my-auto">
-          <div class="hambargar menu lg:hidden">
-            <button
-              aria-label="Open Menu"
-              class="
-                overflow-x-hidden overflow-y-hidden
-                transition
-                ease-in-out
-                focus:outline-none
-                duration-1500
-              "
-              @click="sidebar = !sidebar"
+    <header class="z-40 w-full p-2 lg:p-3 shadow-xs sm:shadow-md">
+      <div class="flex flex-row items-center justify-between">
+        <div class="flex flex-row items-center">
+          <button
+            aria-label="Open Menu"
+            class="
+              lg:hidden
+              focus:outline-none focus:ring-0 focus:ring-offset-0
+            "
+            @click="sidebar = !sidebar"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 text-primary-500 me-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 mt-1.5 text-primary-500 me-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
 
-            <div
-              v-if="sidebar"
-              class="
-                fixed
-                inset-0
-                z-30
-                w-screen
-                h-screen
-                bg-black
-                opacity-50
-                cursor-auto
-              "
-              @click="sidebar = false"
-            />
+          <div
+            v-if="sidebar"
+            class="
+              fixed
+              inset-0
+              z-30
+              w-screen
+              h-screen
+              bg-black
+              opacity-50
+              cursor-auto
+            "
+            @click="sidebar = false"
+          />
 
-            <LeftUserProfile
-              class="h-screen"
-              :show="sidebar"
-              :class="sidebar ? 'openSideBar' : 'closeSideBar'"
-              @hideSidebar="sidebar = false"
-            />
-          </div>
-
+          <LeftUserProfile
+            class="h-screen"
+            :show="sidebar"
+            :class="sidebar ? 'openSideBar' : 'closeSideBar'"
+            @hideSidebar="sidebar = false"
+          />
           <nuxt-link :to="localePath('/')">
             <img
               v-if="store.logo"
-              v-lazy="store.logo"
-              alt="store logo"
-              class="object-contain h-8 md:h-10"
+              v-lazy="`${store.logoCdn || store.logo}?tr=h-80,fo-auto`"
+              alt=""
+              class="object-contain h-10 lg:h-16"
             />
 
             <h1
               v-else
               class="
+                h-10
+                lg:h-16
                 w-28
-                md:w-40
-                text-lg
-                md:text-2xl
+                lg:w-40
+                flex
+                items-center
+                text-start text-lg
+                lg:text-2xl
                 text-transparent
                 bg-clip-text bg-gradient-to-br
                 from-primary-500
@@ -95,12 +93,12 @@
                 overflow-ellipsis
               "
             >
-              {{ store.name }}
+              <span>{{ store.name }}</span>
             </h1>
           </nuxt-link>
         </div>
 
-        <SearchAutocomplete class="absolute hidden my-auto mb-1 lg:flex" />
+        <!-- <SearchAutocomplete class="hidden lg:block" /> -->
 
         <!--right header with icons block start -->
 
@@ -111,20 +109,21 @@
             items-center
             justify-between
             flex-shrink-0
-            ml-10
-            mr-3
+            ms-10
+            me-1
             max-w-max
             space-x-5
           "
         >
           <button
             v-if="!user"
-            class="focus:outline-none"
+            class="focus:outline-none focus:ring-0 focus:ring-offset-0"
+            aria-label="Login"
             @click="findLoginScreen"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 mx-auto"
+              class="h-6 mx-auto"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -143,7 +142,7 @@
           <nuxt-link v-else class="w-auto" :to="localePath('/my')">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 mx-auto"
+              class="h-6 mx-auto"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -158,83 +157,24 @@
 
             <div class="hidden text-sm lg:block">Profile</div>
           </nuxt-link>
-
-          <!-- <nuxt-link class="w-auto" :to="localePath('/my/wishlist')">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 mx-auto"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-
-            <div class="hidden text-sm lg:block">Wishlist</div>
-          </nuxt-link>
-          <nuxt-link class="relative" to="/cart">
-            <div
-              class="
-                absolute
-                top-0
-                right-0
-                -m-1
-                bg-primary-500
-                flex-shrink-0
-                h-4
-                w-4
-                rounded-full
-                flex
-                items-center
-                justify-center
-                text-sm text-center text-white
-              "
-            >
-              <span v-if="cart && cart.qty > 0">{{ cart.qty }}</span>
-
-              <span v-else>0</span>
-            </div>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 mx-auto"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-              />
-            </svg>
-
-            <div class="hidden text-sm lg:block">Cart</div>
-          </nuxt-link> -->
         </div>
 
         <!--right header with icons block end -->
       </div>
 
-      <SearchAutocomplete class="lg:hidden" />
+      <!-- <SearchAutocomplete class="lg:hidden" /> -->
     </header>
-  </div>
+  </section>
 </template>
 
 <script>
 // import CART from '~/gql/cart/cart.gql'
-import SearchAutocomplete from '~/components/SearchAutocomplete.vue'
+// import SearchAutocomplete from '~/components/SearchAutocomplete.vue'
 import LeftUserProfile from '~/components/User/LeftUserProfile.vue'
 
 export default {
   components: {
-    SearchAutocomplete,
+    // SearchAutocomplete,
     LeftUserProfile,
   },
 

@@ -8,18 +8,22 @@ const pwa = {
 }
 const colors = {
   primary: {
-    500: '#FB7801', // Brand Primary Color
+    100: '#ffefe6' /* light orange */,
+    500: '#fc7019' /* orange */,
+    700: '#e25903' /* lit darker orange */,
   },
+
   secondary: {
-    100: '#dff7d5', // Used for gradient button making
-    200: '#32CD32', // green
-    500: '#000000', // Brand Secondary Color
+    100: '#fffae6' /* light yellow */,
+    500: '#ffcc00' /* yellow */,
+    700: '#c2c20a' /* lit darker yellow */,
   },
-  accent: {
-    100: '#faebeb', // very light red
-    500: '#ff8c00', // light-orange
-    900: '#FF461B;', // red
-  },
+
+  accent: '#000000' /* black */,
+
+  success: '#32CD32' /* lime green */,
+
+  error: '#eb0000' /* red */,
 }
 const fontFamily = {
   sans: ['Inter'],

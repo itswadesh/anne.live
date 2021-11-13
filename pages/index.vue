@@ -1,8 +1,8 @@
 <template>
-  <section class="flex bg-gray-50">
-    <div class="hidden md:block">
+  <section class="container mx-auto p-2 sm:p-10 py-5 bg-gray-100">
+    <!-- <div class="hidden md:block">
       <Sidebar />
-    </div>
+    </div> -->
     <div class="w-full">
       <Livenow />
     </div>
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import Sidebar from '~/components/Livenow/Sidebar.vue'
+// import Sidebar from '~/components/Livenow/Sidebar.vue'
 import Livenow from '~/components/Livenow/Livenow.vue'
 export default {
   components: {
-    Sidebar,
+    // Sidebar,
     Livenow,
   },
 

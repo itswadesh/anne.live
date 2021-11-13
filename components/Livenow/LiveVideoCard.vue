@@ -1,7 +1,15 @@
 <template>
   <section
     v-if="channel"
-    class="w-full rounded-md shadow-md hover:shadow bg-white text-gray-800"
+    class="
+      w-full
+      border
+      rounded-md
+      shadow-md
+      hover:shadow-lg
+      bg-white
+      text-gray-800
+    "
   >
     <!-- channel section start  -->
 
@@ -14,17 +22,31 @@
 
       <nuxt-link :to="`/${channel.id}`" class="h-full w-full">
         <img
-          v-lazy="channel.img"
+          v-lazy="channel.imgCdn"
           class="w-full h-40 rounded-t-lg object-cover"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </nuxt-link>
 
-      <div class="absolute right-2 top-2 flex items-center">
-        <div class="h-2 w-2 rounded-full bg-red-500 me-1 animate-pulse"></div>
-
-        <span class="text-xs">LIVE</span>
+      <div
+        class="
+          absolute
+          right-2
+          top-2
+          px-1.5
+          py-1
+          max-w-max
+          text-white
+          tracking-wider
+          leading-3
+          font-semibold
+          text-xs
+          bg-error
+          rounded
+        "
+      >
+        LIVE
       </div>
     </div>
 

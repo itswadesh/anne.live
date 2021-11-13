@@ -1,12 +1,22 @@
 <template>
   <div>
-    <div v-if="channel" class="bg-red-100">
+    <div v-if="channel">
       <div
-        class="pt-2 text-xl p-2 bg-white font-bold text-center text-green-500"
+        class="
+          pt-2
+          text-xl
+          p-2
+          bg-white
+          font-bold
+          text-center text-success
+          capitalize
+        "
       >
         {{ channel.title }}
       </div>
+
       <hls-player :src="channel.hlsPullUrl" />
+
       <!-- <video
         autoplay
         muted
@@ -15,8 +25,13 @@
         height="500"
       />; -->
     </div>
-    <div v-if="channel && channel.products && channel.products.length > 0">
-      <h2 class="font-bold text-xl my-4 ms-2">Products</h2>
+
+    <div
+      v-if="channel && channel.products && channel.products.length > 0"
+      class="container mx-auto p-2 sm:p-10"
+    >
+      <h2 class="font-bold text-xl mb-5">Products</h2>
+
       <div class="flex flex-wrap">
         <a
           v-for="p in channel.products"
@@ -34,7 +49,12 @@
             hover:border-blue-500
           "
         >
-          <img v-lazy="p.img" alt="" class="w-32 h-32 mx-auto" />
+          <img
+            v-lazy="p.img"
+            alt=""
+            class="h-full w-full object-contain object-top"
+          />
+
           <div class="absolute bottom-0 w-full">
             <p
               class="
@@ -53,6 +73,7 @@
           </div>
         </a>
       </div>
+
       <!-- <Chats :channel="$route.params.id" class="my-4" /> -->
     </div>
   </div>

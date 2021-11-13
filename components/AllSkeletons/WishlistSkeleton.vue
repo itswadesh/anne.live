@@ -1,6 +1,14 @@
 <template>
-  <div class="h-64 p-2 mx-3 mt-2 bg-white rounded">
-    <div class="h-48 bg-gray-200 lg:p-2 animate-pulse"></div>
-    <div class="h-10 p-1 mt-2 text-center bg-gray-200 text-1"></div>
-  </div>
+  <div
+    class="
+      w-full
+      h-72
+      md:h-80
+      lg:h-96
+      border
+      bg-gray-200
+      rounded-md
+      animate-pulse
+    "
+  ></div>
 </template>

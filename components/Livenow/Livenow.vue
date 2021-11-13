@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4">
+  <section class="text-gray-800">
     <!-- <div class="flex items-center justify-between h-72">
       <div class="p-1 rounded-md hover:bg-gray-200">
         <svg
@@ -41,11 +41,45 @@
     </div> -->
 
     <!-- Live channels we think you’ll like section start  -->
-    <div class="my-4 max-w-sm mx-auto sm:max-w-full">
-      <h3 class="my-2 text-xl font-semibold">Live sales</h3>
+    <div class="mb-10 max-w-sm mx-auto sm:max-w-full">
+      <h1
+        class="
+          pb-5
+          sm:pb-10
+          font-black
+          tracking-wide
+          text-3xl
+          lg:text-4xl
+          text-center
+          flex flex-col
+          items-center
+          sm:items-start
+          max-w-max
+          mx-auto
+        "
+      >
+        <span>Live sales</span>
+        <hr class="mt-2.5 border-t-4 border-gray-800 opacity-50 w-20" />
+      </h1>
 
       <div>
         <div
+          v-if="loading"
+          class="
+            grid grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-4
+            gap-2
+            sm:gap-4
+            lg:gap-6
+          "
+        >
+          <LiveVideoCardSkeleton v-for="i in 20" :key="i" />
+        </div>
+
+        <div
+          v-else
           class="
             grid grid-cols-1
             sm:grid-cols-2
@@ -128,11 +162,13 @@
 
 <script>
 import LiveVideoCard from '~/components/Livenow/LiveVideoCard.vue'
+import LiveVideoCardSkeleton from '~/components/Livenow/LiveVideoCardSkeleton.vue'
 // import BannerCard from '~/components/Livenow/BannerCard.vue'
 import ShowMore from '~/components/Livenow/ShowMore.vue'
 import CHANNELS from '~/gql/channel/channels.gql'
 export default {
   components: {
+    LiveVideoCardSkeleton,
     LiveVideoCard,
     // BannerCard,
     ShowMore,
@@ -140,15 +176,18 @@ export default {
   data() {
     return {
       channels: null,
+      loading: false,
     }
   },
   async created() {
+    this.loading = true
     const vdo = (await this.$get('channel/channels', {})).data
     // const vdo = (await this.$apollo.query({
     //   query: CHANNELS,
     // })).data.channels.data
     this.channels = vdo
     // console.log(vdo)
+    this.loading = false
   },
 }
 </script>

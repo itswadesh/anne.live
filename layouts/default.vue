@@ -42,11 +42,9 @@
 
       <div v-else>
         <Nav class="fixed top-0 z-50 w-full" @showLogin="showLogin" />
-
-        <Nuxt
-          class="w-full"
-          :class="!settings.id ? 'mt-32 lg:mt-24' : 'mt-24 lg:mt-16'"
-        />
+        <div :class="settings.id ? 'mt-rem' : 'mt-noSettingID'">
+          <Nuxt class="w-full" />
+        </div>
       </div>
     </div>
 
@@ -91,3 +89,26 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (max-width: 1024px) {
+  .mt-rem {
+    margin-top: 3.55rem;
+  }
+}
+@media (min-width: 1024px) {
+  .mt-rem {
+    margin-top: 5.7rem;
+  }
+}
+@media (max-width: 1024px) {
+  .mt-noSettingID {
+    margin-top: 5.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .mt-noSettingID {
+    margin-top: 7.6rem;
+  }
+}
+</style>
