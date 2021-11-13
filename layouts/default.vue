@@ -7,7 +7,7 @@
       font-sans
       antialiased
       text-gray-800
-      bg-gray-50
+      bg-gray-100
     "
   >
     <div class="min-h-screen">

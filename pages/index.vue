@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto p-2 sm:p-10 py-5 bg-gray-100">
+  <section class="container mx-auto p-2 sm:p-10 py-5">
     <!-- <div class="hidden md:block">
       <Sidebar />
     </div> -->

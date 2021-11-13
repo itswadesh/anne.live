@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-8 text-gray-800 bg-white">
+  <div class="w-full p-8 text-gray-800 bg-transparent">
     <div class="w-full my-4 border-b-2 border-gray-400"></div>
     <div class="flex flex-row justify-between">
       <div class="text-sm font-normal tracking-wider md:mt-0 whitespace-nowrap">
