@@ -3,11 +3,11 @@
     <div v-if="channel">
       <div
         class="
-          pt-2
           text-xl
           p-2
           bg-white
           font-bold
+          tracking-wide
           text-center text-success
           capitalize
         "
@@ -15,9 +15,9 @@
         {{ channel.title }}
       </div>
 
-      <hls-player :src="channel.hlsPullUrl" />
-
-      {{ channel.scheduleDateTime }}
+      <div v-if="isLive">
+        <hls-player :src="channel.hlsPullUrl" />
+      </div>
 
       <!-- <video
         autoplay
@@ -26,6 +26,22 @@
         width="500"
         height="500"
       />; -->
+
+      <div
+        v-else
+        class="
+          bg-gray-200
+          h-rem
+          text-center
+          tracking-wide
+          flex flex-col
+          items-center
+          justify-center
+        "
+      >
+        <span class="font-medium mb-2">Live Session Will Start On</span>
+        <span class="font-bold"> {{ channel.scheduleDateTime | date }}</span>
+      </div>
 
       <div
         v-if="channel && channel.products && channel.products.length > 0"
@@ -80,23 +96,6 @@
         <!-- <Chats :channel="$route.params.id" class="my-4" /> -->
       </div>
     </div>
-
-    <!-- <div
-      v-else-if="channel && channel.scheduleDateTime"
-      class="
-        container
-        mx-auto
-        p-2
-        py-5
-        sm:p-10
-        flex
-        justify-center
-        text-center
-        tracking-wide
-      "
-    >
-      {{ channel.scheduleDateTime }}
-    </div> -->
   </section>
 </template>
 
@@ -127,5 +126,8 @@ export default {
 .frosted {
   backdrop-filter: blur(12px);
   background-color: hsla(0, 0%, 100%, 0.3);
+}
+.h-rem {
+  height: 45vh;
 }
 </style>

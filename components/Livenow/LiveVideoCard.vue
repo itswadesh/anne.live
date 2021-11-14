@@ -30,6 +30,7 @@
       </nuxt-link>
 
       <div
+        v-if="channel.isLive"
         class="
           absolute
           right-2
