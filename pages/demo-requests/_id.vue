@@ -47,13 +47,13 @@
 
       <!-- start button  -->
 
-      <button
+      <!-- <button
         v-if="!started"
         class="bg-error px-6 py-2 rounded-full bg-success"
         @click="start"
       >
         Go Live
-      </button>
+      </button> -->
 
       <!-- mute button  -->
 
@@ -135,13 +135,12 @@ export default {
     await this.subscribeToStreams()
     await this.joinChannel(token, uid, channel)
     await this.initLocalStream(uid) // Step-3A
+    await this.publish() // Step-3(B)
+    this.started = true
   },
 
   methods: {
-    async start() {
-      await this.publish() // Step-3(B)
-      this.started = true
-    },
+    async start() {},
     async stop() {
       await this.handleOver()
       this.started = false
