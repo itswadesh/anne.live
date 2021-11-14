@@ -43,15 +43,33 @@
         @click="setOrRelieveSilence"
       ></li> -->
 
-      <div v-if="!started" class="bg-success px-6 py-2 rounded-full">
-        <button @click="start">Start</button>
-      </div>
+      <button
+        v-if="!started"
+        class="bg-success px-6 py-2 rounded-full"
+        @click="start"
+      >
+        Start
+      </button>
 
-      <div v-if="started" class="bg-error px-6 py-2 rounded-full">
-        <button @click="stop">Stop</button>
-      </div>
+      <button
+        v-if="started"
+        class="bg-error px-6 py-2 rounded-full"
+        @click="stop"
+      >
+        Stop
+      </button>
 
-      <!-- <li :class="{ stop: true, isStop }" @click="stopOrOpenVideo"></li> -->
+      <button
+        v-if="started"
+        class="bg-error px-6 py-2 rounded-full"
+        @click="mute"
+      >
+        Mute
+      </button>
+
+      <button v-if="started" :class="{ stop: true, isStop }" @click="stopVideo">
+        Disable Video
+      </button>
     </div>
   </div>
 </template>
@@ -62,8 +80,6 @@ import netease from '~/mixins/netease'
 
 export default {
   mixins: [netease],
-
-  middleware: ['isAuth'],
 
   data() {
     return {
@@ -100,6 +116,12 @@ export default {
       this.started = false
       // this.$router.push('/')
       this.$router.go(-1)
+    },
+    async mute() {
+      await this.setOrRelieveSilence()
+    },
+    async stopVideo() {
+      await this.stopOrOpenVideo()
     },
   },
 }
