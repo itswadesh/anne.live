@@ -181,12 +181,12 @@ export default {
   },
   async created() {
     this.loading = true
-    const vdo = (await this.$get('channel/channels', {})).data
+    const vdo = await this.$get('channel/channels', { upcoming: true })
     // const vdo = (await this.$apollo.query({
     //   query: CHANNELS,
     // })).data.channels.data
-    this.channels = vdo
-    // console.log(vdo)
+    this.channels = vdo.data
+    console.log(vdo)
     this.loading = false
   },
 }
