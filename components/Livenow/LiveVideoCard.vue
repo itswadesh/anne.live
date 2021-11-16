@@ -54,7 +54,7 @@
     <!-- channel section end -->
 
     <!-- channel details start  -->
-
+    ---- {{ channel.user.avatar }}
     <div class="p-2 flex justify-start mt-2">
       <img
         v-lazy="channel.user.avatar"
