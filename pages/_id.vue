@@ -14,7 +14,6 @@
       >
         {{ channel.title }}
       </div>
-
       <div v-if="channel.isLive">
         <hls-player :src="channel.hlsPullUrl" />
       </div>

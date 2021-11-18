@@ -21,7 +21,6 @@ export default {
       const popularSearches = som.popularSearches
       const cart = som.cart
       const me = som.me
-      console.log('zzzzzzzzzzzzzzzzzzzzzzzzzzz', stor)
       commit('settings', settings)
       commit('megamenu', megamenu)
       commit('popularSearches', popularSearches) // We don't want it here because it will slowdown initial load
