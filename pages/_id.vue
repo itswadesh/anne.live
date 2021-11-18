@@ -15,7 +15,7 @@
         {{ channel.title }}
       </div>
 
-      <div v-if="isLive">
+      <div v-if="channel.isLive">
         <hls-player :src="channel.hlsPullUrl" />
       </div>
 
@@ -118,6 +118,26 @@ export default {
         (await this.$get('channel/channel', { id: this.$route.params.id })) ||
         {}
     } catch (e) {}
+  },
+
+  methods: {
+    async start() {},
+
+    async stop() {
+      await this.handleOver()
+      this.started = false
+      this.$router.go(-1)
+    },
+
+    async mute() {
+      this.muted = !this.muted
+      await this.setOrRelieveSilence()
+    },
+
+    async stopVideo() {
+      this.noVideo = !this.noVideo
+      await this.stopOrOpenVideo()
+    },
   },
 }
 </script>

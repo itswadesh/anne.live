@@ -141,16 +141,18 @@ export default {
 
   methods: {
     async start() {},
+
     async stop() {
       await this.handleOver()
       this.started = false
-      // this.$router.push('/')
       this.$router.go(-1)
     },
+
     async mute() {
       this.muted = !this.muted
       await this.setOrRelieveSilence()
     },
+
     async stopVideo() {
       this.noVideo = !this.noVideo
       await this.stopOrOpenVideo()
