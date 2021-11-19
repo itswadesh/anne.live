@@ -63,7 +63,7 @@
 
 <script>
 import SingleVideoCard from '~/components/Video/SingleVideoCard.vue'
-import VIDEOS from '~/gql/channel/videos.gql'
+import VIDEOS from '~/gql/video/videos.gql'
 import { Pagination } from '~/shared/components/ui'
 
 export default {
@@ -85,7 +85,7 @@ export default {
     },
   },
   async created() {
-    const videos = await this.$get('channel/videos', {})
+    const videos = await this.$get('video/videos', {})
     this.videos = videos
     // const videos = await this.$apollo.query({
     //   query: VIDEOS,
