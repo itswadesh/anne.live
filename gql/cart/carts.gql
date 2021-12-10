@@ -1,0 +1,65 @@
+query carts(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  carts(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    pageSize
+    page
+    count
+    data {
+      id
+      currencyCode
+      currencyName
+      currencySymbol
+      formattedAmount{
+        total
+        subtotal
+        offer_total
+        tax
+      }
+      items {
+        pid
+        name
+        slug
+        qty
+        price
+        img
+        imgCdn
+        tracking
+        options
+        vendor {
+          _id
+        }
+      }
+      qty
+      subtotal
+      discount {
+        code
+        value
+        text
+        amount
+      }
+      shipping {
+        charge
+      }
+      total
+      tax
+      createdAt
+      updatedAt
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}

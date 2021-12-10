@@ -1,0 +1,13 @@
+query language($id: ID!) {
+  language(id: $id) {
+    id
+    name
+    code
+    phpLocaleCode
+    rtl
+    sort
+    active
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,53 @@
+mutation saveCurrency(
+  $id: String
+  $decimalMark: String
+  $disambiguateSymbol: String
+  $htmlEntity: String
+  $isoCode: String
+  $isoNumericCode: Int
+  $name: String
+  $smallestDenomination: Float
+  $sort: Int
+  $subUnit: String
+  $subunitToUnit: Float
+  $symbol: String
+  $symbolFirst: Boolean
+  $thousandsSeparator: String
+  $active: Boolean
+) {
+  saveCurrency(
+    id: $id
+    decimalMark: $decimalMark
+    disambiguateSymbol: $disambiguateSymbol
+    htmlEntity: $htmlEntity
+    isoCode: $isoCode
+    isoNumericCode: $isoNumericCode
+    name: $name
+    smallestDenomination: $smallestDenomination
+    sort: $sort
+    subUnit: $subUnit
+    subunitToUnit: $subunitToUnit
+    symbol: $symbol
+    symbolFirst: $symbolFirst
+    thousandsSeparator: $thousandsSeparator
+    active: $active
+  ) {
+    id
+    name
+    sort
+    isoCode
+    isoNumericCode
+    thousandsSeparator
+    decimalMark
+    symbolFirst
+    active
+    symbol
+    disambiguateSymbol
+    htmlEntity
+    subUnit
+    smallestDenomination
+    subunitToUnit
+    createdAt
+    updatedAt
+  }
+}

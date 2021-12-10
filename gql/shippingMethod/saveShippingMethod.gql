@@ -1,0 +1,42 @@
+mutation saveShippingMethod(
+  $id: String!
+  $carrierName: String
+  $method: String
+  $shippingNameAtCheckout: String
+  $minWeight: Float
+  $maxWeight: Float
+  $amount: Float
+  $tableBasedOn: String
+) {
+  saveShippingMethod(
+    id: $id
+    carrierName: $carrierName
+    method: $method
+    shippingNameAtCheckout: $shippingNameAtCheckout
+    minWeight: $minWeight
+    maxWeight: $maxWeight
+    amount: $amount
+    tableBasedOn: $tableBasedOn
+  ) {
+    id
+    carrierName
+    method
+    shippingNameAtCheckout
+    minWeight
+    maxWeight
+    amount
+    tableBasedOn
+    user
+  }
+}
+
+
+# {
+#   "id": "new",
+#   "carrierName": "gati",
+#   "shippingNameAtCheckout": "gati",
+#   "minWeight": 22.22,
+#   "maxWeight": 563.55,
+#   "amount": 333,
+#   "tableBasedOn": "adsa"
+# }

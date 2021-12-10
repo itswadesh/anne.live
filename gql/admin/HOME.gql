@@ -1,0 +1,228 @@
+query HOME {
+  dailySales {
+    _id
+    total
+    qty
+  }
+  topVendors {
+    id
+    firstName
+    lastName
+    productSold
+    avatar
+    avatarCdn
+  }
+  myCustomers {
+    count
+  }
+  productSummary {
+    count
+  }
+  categorySummary {
+    count
+  }
+  orderSummary {
+    count
+    amount
+  }
+  paymentsSummary {
+    count
+    amount
+  }
+  vendorSummary {
+    _id
+    count
+    amount
+    createdAt
+    codPaid
+  }
+  statusSummary {
+    _id
+    count
+    amount
+  }
+  byVendor {
+    count
+    pageSize
+    page
+    data {
+      _id {
+        vendor {
+          firstName
+          lastName
+          phone
+        }
+      }
+      date
+      items {
+        pid
+        name
+      }
+      total
+      count
+    }
+  }
+  orderItems {
+    count
+    page
+    pageSize
+    data {
+      id
+      orderId
+      status
+      pid
+      posInvoiceNo
+      invoiceId
+      itemOrderNo
+      shippingOrderId
+      shippingProvider
+      shippingLabelId
+      shippingRateId
+      shippingTrackingNumber
+      shippingTrackingStatus
+      shippingTrackingUrlProvider
+      shippingLabelUrl
+      shippingCommercialInvoiceUrl
+      name
+      slug
+      img
+      imgCdn
+      tracking
+      shippingCharge
+      price
+      basePrice
+      qty
+      tax
+      baseTax
+      total
+      totalDiscount
+      subtotal
+      brandName
+      brandImg
+      brandImgCdn
+      size
+      color
+      trackingId
+      returnTrackingId
+      courierName
+      returnCourierName
+      type
+      amountRefunded
+      baseAmountRefunded
+      refunds {
+        message
+        qty
+        time
+        amount
+        refundId
+      }
+      #order level info
+      orderNo
+      otp
+      createdAt
+      paySuccess
+      payment {
+        id
+      }
+      paymentMode
+      paymentStatus
+      paymentCurrency
+      paymentReferenceId
+      paymentOrderId
+      paymentReceipt
+      invoiceId
+      paymentGateway
+      codPaid
+      baseCodPaid
+      amountPaid
+      amountDue
+      totalAmountRefunded
+      baseTotalAmountRefunded
+      paymentMsg
+      paymentTime
+      paid
+      userFirstName
+      userLastName
+      userPhone
+      userEmail
+      invoiceLink
+      returnValidTill
+      returnReason
+      discount
+      baseDiscount
+      totalDiscount
+      baseTotalDiscount
+      vendorCommission
+      amount {
+        total
+        discount
+        totalDiscount
+        subtotal
+      }
+      baseAmount {
+        total
+        discount
+        totalDiscount
+        subtotal
+      }
+      user {
+        id
+        firstName
+      }
+      address {
+        firstName
+        lastName
+        town
+        city
+        state
+        zip
+        address
+        lat
+        lng
+      }
+      store {
+        id
+        name
+        email
+      }
+      slot {
+        name
+        value
+        info
+        active
+      }
+      vendor {
+        firstName
+        lastName
+        phone
+        address {
+          address
+        }
+        store {
+          name
+        }
+      }
+      vendorAddress {
+        firstName
+        lastName
+        town
+        city
+        state
+        zip
+        address
+        lat
+        lng
+      }
+      orderHistory {
+        id
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+query paymentsByType {
+  paymentsByType {
+    _id
+    totalAmount
+    qty
+  }
+}

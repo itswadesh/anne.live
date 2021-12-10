@@ -1,0 +1,10 @@
+query zegoWhiteBoard {
+  zegoWhiteBoard {
+    appID
+    server
+    roomID
+    token
+    userID
+    userName
+  }
+}

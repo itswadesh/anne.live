@@ -1,0 +1,19 @@
+query slot($id: ID!) {
+  slot(id: $id) {
+    id
+    name
+    value
+    info
+    active
+    user {
+      id
+      firstName
+      lastName
+    }
+    store {
+      id
+      name
+      email
+    }
+  }
+}

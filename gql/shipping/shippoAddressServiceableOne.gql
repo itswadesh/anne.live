@@ -1,0 +1,15 @@
+query shippoAddressServiceableOne($address: AddressInput!) {
+  shippoAddressServiceableOne(address: $address)
+}
+
+# {
+#   "address": {
+#     "firstName":"Pra",
+#     "lastName": "jayas",
+#     "address":"215 Clayton St.",
+#     "city":"San Francisco",
+#     "state":"CA",
+#     "zip": 94117,
+#     "country":"US"
+#   }
+# }

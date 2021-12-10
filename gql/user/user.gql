@@ -1,0 +1,26 @@
+query user($id: String!) {
+  user(id: $id) {
+    id
+    email
+    firstName
+    lastName
+    avatar
+    avatarCdn
+    city
+    phone
+    role
+    verified
+    active
+    productSold
+    shippingCharges
+    freeShippingOn
+    luluCustomerNo
+    plan
+    storeName
+    vendorInfo
+    banner
+    store
+    createdAt
+    updatedAt
+  }
+}

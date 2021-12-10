@@ -1,0 +1,42 @@
+query allBanners(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $type: String
+  $active: Boolean
+  $isMobile: Boolean
+  $store: ID
+) {
+  allBanners(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    type: $type
+    active: $active
+    isMobile: $isMobile
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      link
+      heading
+      img
+      imgCdn
+      sort
+      type
+      store
+      pageId
+      groupId
+      groupTitle
+      active
+      isMobile
+      createdAt
+      updatedAt
+    }
+  }
+}

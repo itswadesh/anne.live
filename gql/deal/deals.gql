@@ -1,0 +1,45 @@
+query deals(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  deals(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      img
+      imgCdn
+      startTime
+      endTime
+      startTimeISO
+      endTimeISO
+      onGoing
+      dealStatus
+      active
+      products {
+        id
+        name
+        slug
+        img
+        imgCdn
+        price
+      }
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}

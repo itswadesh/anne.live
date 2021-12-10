@@ -1,0 +1,3 @@
+mutation removeGlobalOption($id: ID!) {
+  removeGlobalOption(id: $id)
+}

@@ -1,0 +1,10 @@
+query topVendors($limit: Int) {
+  topVendors(limit: $limit) {
+    id
+    firstName
+    lastName
+    productSold
+    avatar
+    avatarCdn
+  }
+}

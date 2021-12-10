@@ -1,0 +1,35 @@
+query payment($id: ID!) {
+  payment(id: $id) {
+    id
+    paymentOrderId
+    paymentMode
+    paymentGateway
+    referenceId
+    txMsg
+    txTime
+    invoiceId
+    receipt
+    paid
+    amountPaid
+    amountDue
+    amountRefunded
+    currency
+    captured
+    status
+    orderId
+    notes
+    refundStatus
+    description
+    email
+    contact
+    fee
+    tax
+    errorCode
+    errorDescription
+    store {
+      id
+      name
+      email
+    }
+  }
+}

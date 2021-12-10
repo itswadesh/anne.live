@@ -1,0 +1,52 @@
+query wishlists(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  wishlists(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      active
+      createdAt
+      updatedAt
+      product {
+        id
+        name
+        img
+        slug
+        price
+        mrp
+        brand {
+          id
+          name
+          img
+        }
+      }
+      variant {
+        id
+        name
+      }
+      user {
+        id
+        firstName
+        lastName
+      }
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+mutation saveVideo(
+  $id: String!
+  $videoId: String
+  $url: String
+  $name: String
+  $description: String
+  $comment: String
+  $difficulty: String
+  $chapter: String
+  $type: String
+  $img: String
+  $sort: Int
+  $featured: Boolean
+  $active: Boolean
+  $status: String
+  $vid: String
+  $taskId: String
+) {
+  saveVideo(
+    id: $id
+    videoId: $videoId
+    url: $url
+    name: $name
+    description: $description
+    comment: $comment
+    difficulty: $difficulty
+    chapter: $chapter
+    type: $type
+    img: $img
+    sort: $sort
+    featured: $featured
+    active: $active
+    status: $status
+    vid: $vid
+    taskId: $taskId
+  ) {
+    id
+    comment
+    category
+    img
+    sort
+    featured
+    active
+    views
+    vid
+    taskId
+    eventType
+    cid
+    code
+    pieceIndex
+    type
+    url
+    uid
+    filename
+    size
+    channelName
+    mix
+    channelId
+    md5
+    timestamp
+    substream
+    reason
+    streamUrl
+    createTime
+    origUrl
+    playSupport
+    downloadOrigUrl
+    videoName
+    durationMsec
+    status
+    updateTime
+    typeName
+    duration
+    snapshotUrl
+    initialSize
+    typeId
+    shdMp4Url
+    sdMp4Size
+    downloadSdMp4Url
+    description
+    hdMp4Size
+    downloadSdFlvUrl
+    shdMp4Size
+    sdFlvUrl
+    sdFlvSize
+    hdMp4Url
+    sdMp4Url
+    downloadHdMp4Url
+    downloadShdMp4Url
+    completeTime
+    createdAt
+    updatedAt
+  }
+}

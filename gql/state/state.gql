@@ -1,0 +1,16 @@
+query state($id: String) {
+  state(id: $id) {
+    id
+    name
+    value
+    code
+    img
+    imgCdn
+    flag
+    lang
+    sort
+    active
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,27 @@
+query discount($id: ID!) {
+  discount(id: $id) {
+    id
+    active
+    amount
+    applyOn
+    description
+    img
+    imgCdn
+    name
+    q
+    ruleType
+    type
+    maximumUsage
+    startDate
+    endDate
+    numberOfTimeUsed
+    seller {
+      id
+      firstName
+    }
+    store {
+      id
+      name
+    }
+  }
+}

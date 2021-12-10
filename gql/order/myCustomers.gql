@@ -1,0 +1,26 @@
+query myCustomers(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+) {
+  myCustomers(
+    page: $page
+    skip: $skip
+    limit: $limit
+    search: $search
+    sort: $sort
+  ) {
+    pageSize
+    page
+    count
+    data {
+      id
+      firstName
+      lastName
+      email
+      phone
+    }
+  }
+}

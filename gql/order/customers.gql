@@ -1,0 +1,108 @@
+query customers(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $store: ID
+) {
+  customers(
+    page: $page
+    skip: $skip
+    limit: $limit
+    search: $search
+    sort: $sort
+    store: $store
+  ) {
+    count
+    pageSize
+    page
+    data {
+      id
+      status
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      slug
+      img
+      imgCdn
+      tracking
+      shippingCharge
+      price
+      qty
+      tax
+      brandName
+      brandImg
+      brandImgCdn
+      size
+      color
+      trackingId
+      returnTrackingId
+      courierName
+      returnCourierName
+      #order level info
+      orderNo
+      otp
+      createdAt
+      paySuccess
+      paymentMode
+      paymentStatus
+      paymentCurrency
+      paymentReferenceId
+      paymentOrderId
+      paymentReceipt
+      invoiceId
+      paymentGateway
+      codPaid
+      amountPaid
+      amountDue
+      paymentMsg
+      paymentTime
+      paid
+      userFirstName
+      userLastName
+      userPhone
+      invoiceLink
+      returnValidTill
+      paymentMode
+      paymentAmount
+      user {
+        firstName
+        lastName
+        email
+        phone
+        role
+      }
+      address {
+        firstName
+        lastName
+        address
+        lat
+        lng
+      }
+      amount {
+        qty
+        subtotal
+        tax
+        discount
+        total
+        shipping
+      }
+      payment {
+        amountPaid
+        amountDue
+      }
+      orderHistory {
+        id
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+    }
+  }
+}

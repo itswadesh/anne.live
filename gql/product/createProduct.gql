@@ -1,0 +1,46 @@
+mutation createProduct(
+  $name: String
+  $description: String
+  $type: String
+  $location: ID
+  $price: Float
+  $stock: Int
+  $category: ID
+  $img: String
+  $time: String
+) {
+  createProduct(
+    name: $name
+    description: $description
+    location: $location
+    type: $type
+    price: $price
+    stock: $stock
+    category: $category
+    img: $img
+    time: $time
+  ) {
+    id
+    name
+    description
+    slug
+    type
+    price
+    stock
+    category {
+      id
+      name
+    }
+    img
+    time
+    vendor {
+      id
+      firstName
+      lastName
+      phone
+      info {
+        store
+      }
+    }
+  }
+}

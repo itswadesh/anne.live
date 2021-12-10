@@ -1,0 +1,3 @@
+mutation sendInvitation($emails: String) {
+  sendInvitation(emails: $emails)
+}

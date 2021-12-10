@@ -1,0 +1,17 @@
+query units($page: Int, $search: String, $limit: Int, $sort: String) {
+  units(page: $page, search: $search, limit: $limit, sort: $sort) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      info
+      img
+      featured
+      active
+      createdAt
+      updatedAt
+    }
+  }
+}

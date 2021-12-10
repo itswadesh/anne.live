@@ -1,0 +1,27 @@
+query globalOptions {
+  globalOptions {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      key
+      val
+      categories
+      position
+      info
+      preselect
+      required
+      type
+      isFilter
+      active
+      values {
+        id
+        name
+        default
+        position
+      }
+    }
+  }
+}

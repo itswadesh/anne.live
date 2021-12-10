@@ -1,0 +1,18 @@
+mutation facebookMobileLogin($accessToken: String!) {
+  facebookMobileLogin(accessToken: $accessToken) {
+    id
+    email
+    firstName
+    lastName
+    city
+    phone
+    avatar
+    avatarCdn
+    role
+    verified
+    active
+    provider
+    createdAt
+    updatedAt
+  }
+}

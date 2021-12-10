@@ -1,0 +1,43 @@
+query {
+  attributeCategories {
+    id
+    index
+    name
+    slug
+    path
+    slugPath
+    namePath
+    level
+    position
+    megamenu
+    meta
+    metaTitle
+    metaDescription
+    metaKeywords
+    keywords
+    img
+    imgCdn
+    banner
+    bannerCdn
+    featured
+    featuredSort
+    shopbycategory
+    count
+    sizechart
+    active
+    createdAt
+    updatedAt
+    parent {
+      id
+    }
+    attributes {
+      id
+      name
+      show
+      category
+      active
+      createdAt
+      updatedAt
+    }
+  }
+}

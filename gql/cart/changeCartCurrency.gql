@@ -1,0 +1,3 @@
+mutation changeCartCurrency($store: ID!, $currency: ID!) {
+  changeCartCurrency(store: $store, currency: $currency)
+}

@@ -1,0 +1,157 @@
+query products(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sku: String
+  $name: String
+  $brand: String
+  $status: String
+  $price: String
+  $sort: String
+  $vendor: String
+  $category: String
+  $active: Boolean
+  $featured: Boolean
+  $new: Boolean
+  $hot: Boolean
+  $sale: Boolean
+  $where: String
+  $store: ID
+) {
+  products(
+    page: $page
+    skip: $skip
+    limit: $limit
+    search: $search
+    sku: $sku
+    name: $name
+    brand: $brand
+    status: $status
+    price: $price
+    sort: $sort
+    vendor: $vendor
+    category: $category
+    active: $active
+    featured: $featured
+    new: $new
+    hot: $hot
+    sale: $sale
+    where: $where
+    store: $store
+  ) {
+    count
+    pageSize
+    noOfPage
+    page
+    data {
+      id
+      sku
+      barcode
+      productMasterId
+      slug
+      name
+      description
+      type
+      price
+      mrp
+      stock
+      tax
+      img
+      imgCdn
+      images
+      imagesCdn
+      time
+      active
+      popularity
+      position
+      trending
+      featured
+      hot
+      new
+      sale
+      recommended
+      title
+      metaDescription
+      keywords
+      keywordsA
+      ratings
+      reviews
+      itemId
+      warranty
+      # discountPercent
+      ageMin
+      ageMax
+      ageUnit
+      cgst
+      sgst
+      igst
+      returnInfo
+      returnAllowed
+      replaceAllowed
+      returnValidityInDays
+      sizechart
+      batchNo
+      mfgDate
+      expiryDate
+      isSearchable
+      isUnlimited
+      totalSold
+      preOrder
+      zips
+      foodType
+      deliveryDetails
+      formattedMrp
+      formattedPrice
+      slots {
+        id
+        name
+        value
+      }
+      store {
+        id
+        name
+        email
+      }
+      category {
+        name
+      }
+
+      variants {
+        id
+        name
+        options {
+          name
+        }
+        stock
+        weight
+        barcode
+        sku
+        mrp
+        price
+        images
+        trackInventory
+        active
+        sort
+      }
+      vendorInfo {
+        id
+        businessName
+      }
+      vendor {
+        id
+        firstName
+        lastName
+        phone
+        email
+        address {
+          address
+        }
+        info {
+          store
+          storePhotos
+        }
+      }
+    }
+  }
+}

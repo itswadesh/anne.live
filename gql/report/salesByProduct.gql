@@ -1,0 +1,11 @@
+query salesByProduct {
+  salesByProduct {
+    _id {
+      name
+      sku
+      barcode
+    }
+    totalAmount
+    qty
+  }
+}

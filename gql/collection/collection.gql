@@ -1,0 +1,23 @@
+query collection($id: ID!) {
+  collection(id: $id) {
+    id
+    name
+    description
+    active
+    images
+    img
+    imgCdn
+    q
+    sort
+    type
+    user {
+      firstName
+    }
+    products {
+      id
+      name
+    }
+    createdAt
+    updatedAt
+  }
+}

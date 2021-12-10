@@ -1,0 +1,31 @@
+query slots(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  slots(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      value
+      info
+      active
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}

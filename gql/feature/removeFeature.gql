@@ -1,0 +1,3 @@
+mutation removeFeature($id: ID!) {
+  removeFeature(id: $id)
+}

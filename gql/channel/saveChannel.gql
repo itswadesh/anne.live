@@ -1,0 +1,66 @@
+mutation saveChannel(
+  $id: String!
+  $product: ID
+  $products: [ID]
+  $scheduleDateTime: String
+  $title: String
+  $img: String
+  $isLive: Boolean
+) {
+  saveChannel(
+    id: $id
+    product: $product
+    products: $products
+    scheduleDateTime: $scheduleDateTime
+    img: $img
+    isLive: $isLive
+    title: $title
+  ) {
+    id
+    scheduleDateTime
+    title
+    img
+    imgCdn
+    isLive
+    requestId
+    cid
+    ctime
+    pushUrl
+    httpPullUrl
+    hlsPullUrl
+    rtmpPullUrl
+    name
+    code
+    msg
+    product {
+      id
+      name
+      img
+      slug
+      price
+      mrp
+    }
+    products {
+      id
+      name
+      img
+      slug
+      price
+      mrp
+    }
+    user {
+      id
+      firstName
+      lastName
+      email
+      phone
+    }
+    users {
+      id
+      firstName
+      lastName
+      email
+      phone
+    }
+  }
+}

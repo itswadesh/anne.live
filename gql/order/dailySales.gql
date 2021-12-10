@@ -1,0 +1,7 @@
+query summary {
+  dailySales {
+    _id
+    total
+    qty
+  }
+}

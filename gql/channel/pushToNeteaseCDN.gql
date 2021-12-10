@@ -1,0 +1,19 @@
+query pushToNeteaseCDN(
+  $cname: String
+  $cid: Int
+  $taskId: String
+  $streamUrl: String
+  $layout: String
+  $record: Boolean
+  $version: Float
+) {
+  pushToNeteaseCDN(
+    cname: $cname
+    cid: $cid
+    taskId: $taskId
+    streamUrl: $streamUrl
+    layout: $layout
+    record: $record
+    version: $version
+  )
+}

@@ -1,0 +1,109 @@
+mutation updateOrderItem(
+  $id: ID!
+  $status: String
+  $tracking: String
+  $trackingId: String
+  $courierName: String
+  $returnTrackingId: String
+  $returnCourierName: String
+) {
+  updateOrderItem(
+    id: $id
+    status: $status
+    tracking: $tracking
+    trackingId: $trackingId
+    courierName: $courierName
+    returnTrackingId: $returnTrackingId
+    returnCourierName: $returnCourierName
+  ) {
+    id
+    status
+    pid
+    posInvoiceNo
+    itemOrderNo
+    name
+    slug
+    img
+    tracking
+    shippingCharge
+    price
+    qty
+    tax
+    brandName
+    brandImg
+    size
+    color
+    trackingId
+    returnTrackingId
+    courierName
+    returnCourierName
+    #order level info
+    orderNo
+    otp
+    createdAt
+    paySuccess
+    paymentMode
+    paymentStatus
+    paymentCurrency
+    paymentReferenceId
+    paymentOrderId
+    paymentReceipt
+    invoiceId
+    paymentGateway
+    codPaid
+    amountPaid
+    amountDue
+    paymentMsg
+    paymentTime
+    paid
+    userFirstName
+    userLastName
+    userPhone
+    invoiceLink
+    replaceValidTill
+    returnValidTill
+    address {
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    orderHistory {
+      id
+      status
+      title
+      body
+      icon
+      public
+      index
+      time
+    }
+    vendor {
+      firstName
+      lastName
+      phone
+      address {
+        address
+      }
+      store {
+        name
+      }
+    }
+    createdAt
+    updatedAt
+  }
+}
+
+# {
+#   "id": "60eb23fbeee69f0748da49d0",
+#   "status": "Shipped",
+#   "trackingId": "gdmsams333",
+#   "courierName": "DHL",
+#   "returnTrackingId": "u989",
+# 	"returnCourierName": "gati"
+# }

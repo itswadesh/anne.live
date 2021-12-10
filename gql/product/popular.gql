@@ -1,0 +1,35 @@
+query popular($store: ID, $page: Int, $zip: Float) {
+  popular(store: $store, page: $page, zip: $zip) {
+    data {
+      id
+      slug
+      name
+      type
+      price
+      mrp
+      stock
+      img
+      imgCdn
+      images
+      imagesCdn
+      time
+      ratings
+      reviews
+      zips
+      vendor {
+        id
+        firstName
+        lastName
+        phone
+        email
+        info {
+          store
+          storePhotos
+        }
+      }
+    }
+    count
+    pageSize
+    page
+  }
+}

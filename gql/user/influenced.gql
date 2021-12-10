@@ -1,0 +1,15 @@
+query influenced {
+  influenced {
+    id
+    email
+    firstName
+    lastName
+    city
+    state
+    zip
+    phone
+    active
+    createdAt
+    updatedAt
+  }
+}

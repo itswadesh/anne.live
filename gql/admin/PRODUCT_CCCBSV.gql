@@ -1,0 +1,60 @@
+query PRODUCT_CCCBSV($store: ID) {
+  categories(page: 0, limit: 300, store: $store) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+    }
+  }
+  countries(page: 0, limit: 300) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+    }
+  }
+  colors(page: 0, limit: 300, store: $store) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      color_code
+    }
+  }
+  brands(page: 0, limit: 300, store: $store) {
+    count
+    page
+    pageSize
+    data {
+      id
+      brandId
+      name
+    }
+  }
+  sizes(page: 0, limit: 300, store: $store) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+    }
+  }
+  users(page: 0, limit: 300, store: $store, role: "vendor") {
+    count
+    page
+    pageSize
+    data {
+      id
+      email
+      firstName
+      lastName
+    }
+  }
+}

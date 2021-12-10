@@ -1,0 +1,5 @@
+mutation paymentConfirmation($paymentId: ID!) {
+  paymentConfirmation(paymentId: $paymentId) {
+    id
+  }
+}

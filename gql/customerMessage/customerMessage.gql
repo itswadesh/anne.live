@@ -1,0 +1,13 @@
+query customerMessage($id: ID!) {
+  customerMessage(id: $id) {
+    id
+    name
+    email
+    message
+    store {
+      id
+      name
+      email
+    }
+  }
+}

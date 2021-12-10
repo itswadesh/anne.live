@@ -1,0 +1,3 @@
+mutation removeSlot($id: ID!) {
+  removeSlot(id: $id)
+}

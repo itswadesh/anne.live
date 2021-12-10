@@ -1,0 +1,3 @@
+mutation syncOrderItemWithShipping($orderItems: [ID]) {
+  syncOrderItemWithShipping(orderItems: $orderItems)
+}

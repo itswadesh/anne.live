@@ -1,0 +1,26 @@
+mutation saveUnit(
+  $id: String!
+  $name: String
+  $info: String
+  $img: String
+  $featured: Boolean
+  $active: Boolean
+) {
+  saveUnit(
+    id: $id
+    name: $name
+    info: $info
+    img: $img
+    featured: $featured
+    active: $active
+  ) {
+    id
+    name
+    info
+    img
+    featured
+    active
+    createdAt
+    updatedAt
+  }
+}

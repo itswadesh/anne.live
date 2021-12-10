@@ -1,0 +1,49 @@
+query search(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $foodType: String
+  $zip: Float
+  $search: String
+  $sort: String
+  $q: String
+) {
+  search(
+    page: $page
+    q: $q
+    skip: $skip
+    limit: $limit
+    foodType: $foodType
+    zip: $zip
+    search: $search
+    sort: $sort
+  ) {
+    data {
+      id
+      slug
+      name
+      foodType
+      price
+      stock
+      img
+      time
+      ratings
+      reviews
+      vendor {
+        id
+        firstName
+        lastName
+        phone
+        email
+        avatar
+        info {
+          store
+          storePhotos
+        }
+      }
+    }
+    count
+    pageSize
+    page
+  }
+}

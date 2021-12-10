@@ -1,0 +1,3 @@
+mutation deleteSubscription($id: ID!) {
+  deleteSubscription(id: $id)
+}

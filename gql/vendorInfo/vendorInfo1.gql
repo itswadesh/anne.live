@@ -1,0 +1,22 @@
+query vendorInfo1($id: ID) {
+  vendorInfo1(id: $id) {
+    id
+    bankAccountNo
+    bankName
+    bankIfsc
+    bankAccountHolderName
+    bankSwiftCode
+    banner
+    bannerCdn
+    commissionType
+    commissionValue
+    createdAt
+    updatedAt
+    zips
+    country
+    user
+    address
+    store
+    businessName
+  }
+}

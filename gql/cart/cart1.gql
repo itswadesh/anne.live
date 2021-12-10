@@ -1,0 +1,42 @@
+# for testing
+query cart1($store: ID) {
+  cart1(store: $store) {
+    id
+    currency
+    currencyCode
+    currencyName
+    currencySymbol
+    items {
+      pid
+      barcode
+      tax
+      name
+      slug
+      qty
+      price
+      mrp
+      shippingCharge
+      img
+      imgCdn
+      options
+      tracking
+      brandName
+      vendorFirstName
+      vendorLastName
+      vendorPhone
+    }
+    qty
+    subtotal
+    discount {
+      code
+      value
+      text
+      amount
+    }
+    shipping {
+      charge
+    }
+    tax
+    total
+  }
+}

@@ -1,0 +1,48 @@
+query banners(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $type: String
+  $pageId: String
+  $groupId: String
+  $groupTitle: String
+  $active: Boolean
+  $isMobile: Boolean
+  $store: ID
+) {
+  banners(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    type: $type
+    pageId: $pageId
+    groupId: $groupId
+    groupTitle: $groupTitle
+    active: $active
+    isMobile: $isMobile
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      link
+      heading
+      img
+      imgCdn
+      sort
+      type
+      pageId
+      groupId
+      groupTitle
+      active
+      isMobile
+      createdAt
+      updatedAt
+      store
+    }
+  }
+}

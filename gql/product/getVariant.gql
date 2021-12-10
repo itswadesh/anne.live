@@ -1,0 +1,11 @@
+query getVariant($pid: ID!, $options: [NameValIp]) {
+  getVariant(pid: $pid, options: $options) {
+    id
+    stock
+    mrp
+    price
+    img
+    sku
+    weight
+  }
+}

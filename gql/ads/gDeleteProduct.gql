@@ -1,0 +1,3 @@
+mutation gDeleteProduct($productId: ID!, $authCode: String!) {
+  gDeleteProduct(productId: $productId, authCode: $authCode)
+}

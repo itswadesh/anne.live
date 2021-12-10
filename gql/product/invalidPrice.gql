@@ -1,0 +1,47 @@
+query invalidPrice(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $category: String
+  $store: ID
+  $active: Boolean
+) {
+  invalidPrice(
+    page: $page
+    skip: $skip
+    limit: $limit
+    search: $search
+    sort: $sort
+    category: $category
+    store: $store
+    active: $active
+  ) {
+    data {
+      id
+      slug
+      name
+      type
+      price
+      mrp
+      stock
+      img
+      imgCdn
+      images
+      time
+      vendor {
+        id
+        firstName
+        lastName
+        phone
+        email
+        info {
+          store
+          storePhotos
+        }
+      }
+    }
+    count
+  }
+}

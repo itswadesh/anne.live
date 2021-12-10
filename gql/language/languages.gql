@@ -1,0 +1,30 @@
+query languages(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  languages(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      code
+      phpLocaleCode
+      rtl
+      sort
+      active
+      createdAt
+      updatedAt
+    }
+  }
+}

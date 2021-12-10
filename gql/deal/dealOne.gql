@@ -1,0 +1,16 @@
+query dealOne($id: ID!) {
+  dealOne(id: $id) {
+    id
+    name
+    img
+    imgCdn
+    startTime
+    endTime
+    startTimeISO
+    endTimeISO
+    onGoing
+    products
+    dealStatus
+    active
+  }
+}

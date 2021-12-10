@@ -1,0 +1,17 @@
+query getGdprDataDeleteRequest($id: ID) {
+  getGdprDataDeleteRequest(id: $id) {
+    id
+    comment
+    description
+    email
+    reason
+    status
+    createdAt
+    user {
+      id
+      firstName
+      lastName
+      email
+    }
+  }
+}

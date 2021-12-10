@@ -1,0 +1,21 @@
+query currency($id: ID!) {
+  currency(id: $id) {
+    id
+    name
+    sort
+    isoCode
+    isoNumericCode
+    thousandsSeparator
+    decimalMark
+    symbolFirst
+    active
+    symbol
+    disambiguateSymbol
+    htmlEntity
+    subUnit
+    smallestDenomination
+    subunitToUnit
+    createdAt
+    updatedAt
+  }
+}

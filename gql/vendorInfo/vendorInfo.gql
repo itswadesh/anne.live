@@ -1,0 +1,45 @@
+query vendorInfo($id: ID) {
+  vendorInfo(id: $id) {
+    id
+    businessName
+    bankAccountNo
+    bankName
+    bankIfsc
+    bankAccountHolderName
+    bankSwiftCode
+    banner
+    bannerCdn
+    commissionType
+    commissionValue
+    createdAt
+    updatedAt
+    zips
+    country {
+      id
+      name
+    }
+    user {
+      id
+    }
+    address {
+      id
+      firstName
+      lastName
+      address
+      locality
+      city
+      state
+      country
+      zip
+      lat
+      lng
+    }
+    store {
+      id
+      name
+      email
+    }
+    about
+    banners
+  }
+}

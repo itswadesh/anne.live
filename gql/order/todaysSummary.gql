@@ -1,0 +1,14 @@
+query todaysSummary {
+  id
+  orderNo
+  otp
+  qty
+  amount
+  paymentOrderId
+  delivery
+  status
+  items
+  address
+  createdAt
+  updatedAt
+}

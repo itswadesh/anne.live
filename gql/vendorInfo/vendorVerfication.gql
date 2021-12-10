@@ -1,0 +1,40 @@
+mutation vendorVerification(
+  $id: ID!
+  $country: ID
+  $store: ID
+  $zips: [Float]
+  $zip: String
+) {
+  vendorVerification(
+    id: $id
+    country: $country
+    store: $store
+    zips: $zips
+    zip: $zip
+  ) {
+    id
+    store {
+      id
+      name
+      domain
+    }
+    zips
+    country {
+      id
+      name
+      value
+      dialCode
+      code
+      img
+      imgCdn
+      flag
+      lang
+      states {
+        name
+      }
+      active
+    }
+    createdAt
+    updatedAt
+  }
+}

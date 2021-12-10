@@ -1,0 +1,35 @@
+mutation {
+  addAddress(
+    firstName: "sunil"
+    lastName: "jayas"
+    type: "home"
+    address: "215 Clayton St."
+    locality: "Asddsa"
+    town: "ggc"
+    district: "swm"
+    city: "San Francisco"
+    country: "US"
+    state: "CA"
+    zip: 94117
+    phone: "8003423344"
+    lat: 27.2046
+    lng: 77.4977
+    store: "614ddf18a81e4849d8dbb653"
+  ) {
+    id
+    firstName
+    lastName
+    address
+    locality
+    town
+    district
+    city
+    type
+    country
+    state
+    zip
+    phone
+    lat
+    lng
+  }
+}

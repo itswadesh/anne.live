@@ -1,0 +1,79 @@
+query allOrders(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $status: String
+  $where: String
+  $store: ID
+) {
+  allOrders(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    status: $status
+    where: $where
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      orderNo
+      createdAt
+      paymentMode
+      paymentStatus
+      userFirstName
+      userLastName
+      userPhone
+      amount {
+        qty
+        subtotal
+        tax
+        discount
+        total
+        shipping
+      }
+      address {
+        firstName
+        lastName
+        address
+        lat
+        lng
+      }
+      store {
+        id
+        name
+        email
+      }
+      items {
+        pid
+        orderItemId
+        posInvoiceNo
+        itemOrderNo
+        name
+        img
+        imgCdn
+        slug
+        price
+        qty
+        subtotal
+        total
+        status
+        vendor {
+          firstName
+          lastName
+          phone
+          store {
+            name
+          }
+          address {
+            address
+          }
+        }
+      }
+    }
+  }
+}

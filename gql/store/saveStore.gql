@@ -1,0 +1,326 @@
+mutation saveStore(
+  $id: String!
+  $active: Boolean
+  $featured: Boolean
+  $adminNotifications: AdminNotificationIp
+  $address: String
+  $alert: String
+  $analyticsTrackingId: String
+  $banners: [String]
+  $city: String
+  $closed: Boolean
+  $closedMessage: String
+  $country: ID
+  $currency: ID
+  $currencyCode: String
+  $currencyDecimals: Float
+  $currencySymbol: String
+  $customerOrderNotifications: UserNotificationIp
+  $description: String
+  $metaDescription: String
+  $dimentionUnit: String
+  $domain: String
+  $email: String
+  $facebook: String
+  $facebookPixelId: String
+  $facebookUrl: String
+  $favicon: String
+  $firstName: String
+  $freeShippingOn: Float
+  $gdpr: Boolean
+  $gdprCookieConsent: String
+  $google: String
+  $googleAdsTag: String
+  $homeMeta1: String
+  $homeMeta2: String
+  $homeMeta3: String
+  $homeMeta4: String
+  $img: String
+  $images: [String]
+  $bankAccountNo: String
+  $bankAccountHolderName: String
+  $bankIfscCode: String
+  $bankSwiftCode: String
+  $instagram: String
+  $instagramUrl: String
+  $isHideNilStock: Boolean
+  $isMegamenu: Boolean
+  $isOpen: Boolean
+  $isSearch: Boolean
+  $isHyperlocal: Boolean
+  $isFnb: Boolean
+  $keywords: String
+  $lastName: String
+  $lat: Float
+  $legalName: String
+  $linkedin: String
+  $lng: Float
+  $locality: String
+  $logo: String
+  $logoDark: String
+  $logoMobile: String
+  $logoMobileDark: String
+  $minimumOrderValue: Float
+  $minOrderValue: Float ## not in use
+  $name: String
+  $openGraphImage: String
+  $pageSize: Int
+  $phone: String
+  $pinterestTag: String
+  $pinterestUrl: String
+  $qrCode: String
+  $refreshSlug: Boolean
+  $review: ReviewSettingIp
+  $searchbarText: String
+  $shipping: ShippingIp
+  $shippingCharge: Float
+  $shopAddress: String
+  $shopPhone: String
+  $slug: String
+  $snapChatPixel: String
+  $state: String
+  $storeId: String
+  $timeZone: String
+  $timing: String
+  $title: String
+  $twitter: String
+  $twitterUrl: String
+  $websiteEmail: String
+  $websiteLegalName: String
+  $websiteName: String
+  $weightUnit: String
+  $youtubeUrl: String
+  $webmail: String
+  $zip: Float
+  $timeDisplayFormat: String
+  $priceDisplayFormat: String
+  $currencySuffix: String
+  $hideDecimalInCurrency: Boolean
+  $sms: SmsIp
+) {
+  saveStore(
+    id: $id
+    active: $active
+    featured: $featured
+    adminNotifications: $adminNotifications
+    address: $address
+    alert: $alert
+    analyticsTrackingId: $analyticsTrackingId
+    banners: $banners
+    city: $city
+    closed: $closed
+    closedMessage: $closedMessage
+    country: $country
+    currency: $currency
+    currencyCode: $currencyCode
+    currencyDecimals: $currencyDecimals
+    currencySymbol: $currencySymbol
+    customerOrderNotifications: $customerOrderNotifications
+    description: $description
+    metaDescription: $metaDescription
+    dimentionUnit: $dimentionUnit
+    domain: $domain
+    email: $email
+    facebook: $facebook
+    facebookPixelId: $facebookPixelId
+    facebookUrl: $facebookUrl
+    favicon: $favicon
+    firstName: $firstName
+    freeShippingOn: $freeShippingOn
+    gdpr: $gdpr
+    gdprCookieConsent: $gdprCookieConsent
+    google: $google
+    googleAdsTag: $googleAdsTag
+    homeMeta1: $homeMeta1
+    homeMeta2: $homeMeta2
+    homeMeta3: $homeMeta3
+    homeMeta4: $homeMeta4
+    img: $img
+    images: $images
+    bankAccountNo: $bankAccountNo
+    bankAccountHolderName: $bankAccountHolderName
+    bankIfscCode: $bankIfscCode
+    bankSwiftCode: $bankSwiftCode
+    instagram: $instagram
+    instagramUrl: $instagramUrl
+    isHideNilStock: $isHideNilStock
+    isMegamenu: $isMegamenu
+    isOpen: $isOpen
+    isSearch: $isSearch
+    isHyperlocal: $isHyperlocal
+    isFnb: $isFnb
+    keywords: $keywords
+    lastName: $lastName
+    lat: $lat
+    legalName: $legalName
+    linkedin: $linkedin
+    lng: $lng
+    locality: $locality
+    logo: $logo
+    logoDark: $logoDark
+    logoMobile: $logoMobile
+    logoMobileDark: $logoMobileDark
+    minimumOrderValue: $minimumOrderValue
+    minOrderValue: $minOrderValue
+    name: $name
+    openGraphImage: $openGraphImage
+    pageSize: $pageSize
+    phone: $phone
+    pinterestTag: $pinterestTag
+    pinterestUrl: $pinterestUrl
+    qrCode: $qrCode
+    refreshSlug: $refreshSlug
+    review: $review
+    searchbarText: $searchbarText
+    shipping: $shipping
+    shippingCharge: $shippingCharge
+    shopAddress: $shopAddress
+    shopPhone: $shopPhone
+    slug: $slug
+    snapChatPixel: $snapChatPixel
+    state: $state
+    storeId: $storeId
+    timeZone: $timeZone
+    timing: $timing
+    title: $title
+    twitter: $twitter
+    twitterUrl: $twitterUrl
+    websiteEmail: $websiteEmail
+    websiteLegalName: $websiteLegalName
+    websiteName: $websiteName
+    weightUnit: $weightUnit
+    youtubeUrl: $youtubeUrl
+    webmail: $webmail
+    zip: $zip
+    timeDisplayFormat: $timeDisplayFormat
+    priceDisplayFormat: $priceDisplayFormat
+    currencySuffix: $currencySuffix
+    hideDecimalInCurrency: $hideDecimalInCurrency
+    sms: $sms
+  ) {
+    id
+    active
+    featured
+    adminNotifications {
+      lowStockNotification
+      newOrderPlaced
+    }
+    address
+    alert
+    analyticsTrackingId
+    banners
+    city
+    closed
+    closedMessage
+    country
+    currency
+    currencyCode
+    currencyDecimals
+    currencySymbol
+    customerOrderNotifications {
+      downloadEGoods
+      giftCardPurchased
+      orderConfirmation
+      orderIsReadyForPickup
+      orderShipped
+      orderStatusChanged
+    }
+    description
+    metaDescription
+    dimentionUnit
+    email
+    facebook
+    facebookPixelId
+    facebookUrl
+    favicon
+    faviconCdn
+    firstName
+    freeShippingOn
+    gdpr
+    gdprCookieConsent
+    google
+    googleAdsTag
+    homeMeta1
+    homeMeta2
+    homeMeta3
+    homeMeta4
+    img
+    imgCdn
+    images
+    imagesCdn
+    instagram
+    instagramUrl
+    isHideNilStock
+    isMegamenu
+    isOpen
+    isSearch
+    isHyperlocal
+    isFnb
+    keywords
+    lastName
+    lat
+    legalName
+    linkedin
+    lng
+    locality
+    logo
+    logoDark
+    logoMobile
+    logoMobileDark
+    logoCdn
+    logoDarkCdn
+    logoMobileCdn
+    logoMobileDarkCdn
+    minimumOrderValue
+    minOrderValue
+    name
+    openGraphImageCdn
+    pageSize
+    phone
+    pinterestTag
+    pinterestUrl
+    qrCode
+    review {
+      enabled
+      moderate
+    }
+    searchbarText
+    shipping {
+      charge
+      deliveryDays
+      enabled
+      free
+      method
+      provider
+    }
+    shippingCharge
+    shopAddress
+    shopPhone
+    slug
+    snapChatPixel
+    state
+    storeId
+    timeZone
+    timing
+    title
+    twitter
+    twitterUrl
+    websiteEmail
+    websiteLegalName
+    websiteName
+    weightUnit
+    youtubeUrl
+    webmail
+    zip
+    timeDisplayFormat
+    priceDisplayFormat
+    currencySuffix
+    hideDecimalInCurrency
+    createdAt
+    updatedAt
+    user
+    sms {
+      AUTO_VERIFICATION_ID
+    }
+  }
+}

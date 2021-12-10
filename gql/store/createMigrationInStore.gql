@@ -1,0 +1,5 @@
+mutation createMigrationInStore($storeId: ID) {
+  createMigrationInStore(storeId: $storeId)
+}
+
+# storeId not mandatory(in case of not passing , automaticaly take the ccurrent logged in user store)

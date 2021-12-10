@@ -1,0 +1,210 @@
+query order($id: ID!) {
+  order(id: $id) {
+    id
+    orderNo
+    otp
+    createdAt
+    paySuccess
+    payment {
+      id
+    }
+    paymentMode
+    paymentStatus
+    paymentCurrency
+    paymentReferenceId
+    paymentOrderId
+    paymentReceipt
+    invoiceId
+    paymentGateway
+    codPaid
+    baseCodPaid
+    amountPaid
+    amountDue
+    paymentMsg
+    paymentTime
+    paid
+    totalAmountRefunded
+    baseTotalAmountRefunded
+    amount {
+      qty
+      subtotal
+      tax
+      discount
+      total
+      shipping
+    }
+    baseAmount {
+      qty
+      subtotal
+      tax
+      discount
+      total
+      shipping
+    }
+    userFirstName
+    userLastName
+    userPhone
+    userEmail
+    addressId {
+      id
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    address {
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    store {
+      id
+      name
+      email
+    }
+    items {
+      id
+      pid
+      orderItemId
+      posInvoiceNo
+      itemOrderNo
+      name
+      barcode
+      img
+      imgCdn
+      slug
+      foodType
+      price
+      basePrice
+      qty
+      shippingCharge
+      baseShippingCharge
+      tax
+      baseTax
+      time
+      options
+      brandName
+      brandImg
+      brandImgCdn
+      color
+      size
+      status
+      type
+      returnReason
+      slot {
+        name
+        value
+        info
+        active
+      }
+      vendor {
+        firstName
+        lastName
+        phone
+        address {
+          address
+        }
+        store {
+          name
+        }
+      }
+      vendorAddress {
+        firstName
+        lastName
+        town
+        city
+        state
+        zip
+        address
+        lat
+        lng
+      }
+      status
+      orderHistory {
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+      amountRefunded
+      baseAmountRefunded
+      refunds {
+        qty
+        amount
+        message
+        refundId
+        time
+      }
+    }
+    orderItems {
+      id
+      status
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      slug
+      img
+      imgCdn
+      tracking
+      shippingCharge
+      tax
+      brandName
+      brandImg
+      brandImgCdn
+      invoiceLink
+      returnValidTill
+      color
+      size
+      trackingId
+      returnTrackingId
+      courierName
+      returnCourierName
+      type
+      price
+      mrp
+      qty
+      subtotal
+      discount
+      totalDiscount
+      total
+      returnReason
+      weight
+      unit
+      vendorInfoBusinessName
+      vendorInfoCommissionType
+      vendorInfoCommissionValue
+      orderHistory {
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+      amountRefunded
+      refunds {
+        amount
+        qty
+        message
+        refundId
+        time
+      }
+    }
+  }
+}

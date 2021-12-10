@@ -1,0 +1,43 @@
+mutation saveDeal(
+  $id: ID
+  $name: String
+  $img: String
+  $startTime: String
+  $endTime: String
+  $startTimeISO: String
+  $endTimeISO: String
+  $onGoing: Boolean
+  $products: [String]
+  $dealStatus: Boolean
+  $active: Boolean
+  $store: ID
+) {
+  saveDeal(
+    id: $id
+    name: $name
+    img: $img
+    startTime: $startTime
+    endTime: $endTime
+    startTimeISO: $startTimeISO
+    endTimeISO: $endTimeISO
+    onGoing: $onGoing
+    products: $products
+    dealStatus: $dealStatus
+    active: $active
+    store: $store
+  ) {
+    id
+    name
+    img
+    imgCdn
+    startTime
+    endTime
+    startTimeISO
+    endTimeISO
+    onGoing
+    dealStatus
+    active
+    products
+    store
+  }
+}

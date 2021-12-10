@@ -1,0 +1,273 @@
+mutation saveProduct(
+  $id: String!
+  $name: String
+  $slug: String
+  $description: String
+  $type: String
+  $location: ID
+  $country: ID
+  $price: Float
+  $mrp: Float
+  $stock: Int
+  $tax: Float
+  $img: String
+  $images: [String]
+  $time: String
+  $active: Boolean
+  $hot: Boolean
+  $featured: Boolean
+  $trending: Boolean
+  $sale: Boolean
+  $new: Boolean
+  $recommended: Boolean
+  $position: Int
+  $category: ID
+  $categories: [ID!]
+  $collections: [ID]
+  $brand: ID
+  $parentBrand: ID
+  $variants: [ID!]
+  $popularity: Int
+  $sku: String
+  $hsn: String
+  $group: String
+  $colorCode: String
+  $colorName: String
+  $size: ID
+  $barcode: String
+  $title: String
+  $metaDescription: String
+  $keywords: String
+  $itemId: String
+  $warranty: String
+  $ageMin: Int
+  $ageMax: Int
+  $ageUnit: String
+  $styleCode: String
+  $eanNo: String
+  $articleCode: String
+  $productMasterId: String
+  $currency: String
+  $manufacturer: String
+  $returnInfo: String
+  $gender: String
+  $condition: String
+  $gtin: String
+  $countryOfOrigin: String
+  $cgst: Float
+  $sgst: Float
+  $igst: Float
+  $weight: Float
+  $replaceAllowed: Boolean
+  $returnAllowed: Boolean
+  $returnValidityInDays: Int
+  $replaceValidityInDays: Int
+  $length: Float
+  $width: Float
+  $height: Float
+  $relatedProducts: [ID!]
+  $specifications: [ID!]
+  $store: ID
+  $files: [String]
+  $sizechart: String
+  $mfgDate: String
+  $batchNo: String
+  $expiryDate: String
+  $unit: String
+  $dimensionUnit: String
+  $isSearchable: Boolean
+  $preOrder: Boolean
+  $isUnlimited: Boolean
+  $zips: [Float]
+  $foodType: String
+  $deliveryDetails: String
+  $slots: [ID]
+) {
+  saveProduct(
+    id: $id
+    name: $name
+    slug: $slug
+    description: $description
+    type: $type
+    location: $location
+    country: $country
+    price: $price
+    mrp: $mrp
+    stock: $stock
+    tax: $tax
+    img: $img
+    images: $images
+    time: $time
+    active: $active
+    category: $category
+    categories: $categories
+    collections: $collections
+    brand: $brand
+    parentBrand: $parentBrand
+    popularity: $popularity
+    sku: $sku
+    hsn: $hsn
+    barcode: $barcode
+    group: $group
+    colorCode: $colorCode
+    colorName: $colorName
+    size: $size
+    position: $position
+    variants: $variants
+    hot: $hot
+    featured: $featured
+    trending: $trending
+    sale: $sale
+    new: $new
+    recommended: $recommended
+    title: $title
+    metaDescription: $metaDescription
+    keywords: $keywords
+    itemId: $itemId
+    warranty: $warranty
+    ageMin: $ageMin
+    ageMax: $ageMax
+    ageUnit: $ageUnit
+    styleCode: $styleCode
+    eanNo: $eanNo
+    articleCode: $articleCode
+    productMasterId: $productMasterId
+    currency: $currency
+    manufacturer: $manufacturer
+    returnInfo: $returnInfo
+    gender: $gender
+    condition: $condition
+    gtin: $gtin
+    countryOfOrigin: $countryOfOrigin
+    cgst: $cgst
+    sgst: $sgst
+    igst: $igst
+    relatedProducts: $relatedProducts
+    specifications: $specifications
+    weight: $weight
+    replaceAllowed: $replaceAllowed
+    returnAllowed: $returnAllowed
+    returnValidityInDays: $returnValidityInDays
+    replaceValidityInDays: $replaceValidityInDays
+    length: $length
+    width: $width
+    height: $height
+    store: $store
+    files: $files
+    sizechart: $sizechart
+    mfgDate: $mfgDate
+    batchNo: $batchNo
+    expiryDate: $expiryDate
+    unit: $unit
+    dimensionUnit: $dimensionUnit
+    isSearchable: $isSearchable
+    preOrder: $preOrder
+    isUnlimited: $isUnlimited
+    zips: $zips
+    foodType: $foodType
+    deliveryDetails: $deliveryDetails
+    slots: $slots
+  ) {
+    id
+    name
+    description
+    slug
+    type
+    price
+    mrp
+    stock
+    tax
+    img
+    imgCdn
+    images
+    imagesCdn
+    time
+    active
+    popularity
+    sku
+    hsn
+    group
+    brand
+    parentBrand
+    color {
+      color_code
+    }
+    size
+    barcode
+    position
+    trending
+    featured
+    hot
+    new
+    sale
+    recommended
+    title
+    metaDescription
+    keywords
+    keywordsA
+    itemId
+    warranty
+    ageMin
+    ageMax
+    ageUnit
+    styleCode
+    styleId
+    eanNo
+    articleCode
+    productMasterId
+    currency
+    manufacturer
+    countryOfOrigin
+    returnInfo
+    gender
+    condition
+    gtin
+    cgst
+    sgst
+    igst
+    vendorInfo
+    vendor
+    specifications {
+      id
+      name
+      value
+    }
+    relatedProducts {
+      id
+      name
+      slug
+      img
+    }
+    colorGroup
+    sizeGroup
+    variants
+    collections
+    weight
+    length
+    width
+    height
+    returnAllowed
+    replaceAllowed
+    returnValidityInDays
+    replaceValidityInDays
+    store
+    files
+    sizechart
+    batchNo
+    mfgDate
+    expiryDate
+    dimensionUnit
+    unit
+    isSearchable
+    preOrder
+    isUnlimited
+    zips
+    foodType
+    location
+    country
+    slots
+    formattedMrp
+    formattedPrice
+    deliveryDetails
+  }
+}

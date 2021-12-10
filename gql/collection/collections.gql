@@ -1,0 +1,43 @@
+query collections(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  collections(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      description
+      active
+      images
+      img
+      imgCdn
+      q
+      sort
+      type
+      createdAt
+      updatedAt
+      products {
+        id
+        name
+      }
+      store {
+        id
+        name
+        email
+        phone
+      }
+    }
+  }
+}

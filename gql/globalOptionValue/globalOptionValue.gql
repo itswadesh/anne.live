@@ -1,0 +1,10 @@
+query globalOptionValue($id: ID!) {
+  globalOptionValue(id: $id) {
+    id
+    global_option_id
+    name
+    default
+    position
+    active
+  }
+}

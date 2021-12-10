@@ -1,0 +1,3 @@
+query pickrrServiceability($fromAddressId: ID!, $toAddressId: ID!) {
+  pickrrServiceability(fromAddressId: $fromAddressId, toAddressId: $toAddressId)
+}

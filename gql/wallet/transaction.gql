@@ -1,0 +1,20 @@
+query transaction($transactionId: ID!) {
+  transaction(transactionId: $transactionId) {
+    id
+    amount
+    remark
+    direction
+    user {
+      id
+      firstName
+      lastName
+    }
+    referedUser {
+      id
+      firstName
+      lastName
+    }
+    createdAt
+    updatedAt
+  }
+}

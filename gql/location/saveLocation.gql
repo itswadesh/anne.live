@@ -1,0 +1,30 @@
+mutation saveLocation(
+  $id: String!
+  $name: String
+  $active: Boolean
+  $country: String
+  $zip: String
+  $lat: Float
+  $lng: Float
+) {
+  saveLocation(
+    id: $id
+    name: $name
+    active: $active
+    country: $country
+    zip: $zip
+    lat: $lat
+    lng: $lng
+  ) {
+    id
+    name
+    active
+    country
+    zip
+    lat
+    lng
+    zips
+    createdAt
+    updatedAt
+  }
+}

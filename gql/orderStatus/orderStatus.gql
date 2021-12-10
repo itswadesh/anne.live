@@ -1,0 +1,14 @@
+query orderStatus($id: ID!) {
+  orderStatus(id: $id) {
+    id
+    order
+    item
+    event
+    tracking_id
+    type
+    courier_name
+    active
+    createdAt
+    updatedAt
+  }
+}

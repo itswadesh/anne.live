@@ -1,0 +1,16 @@
+query categoryAttributes($category: ID!) {
+  categoryAttributes(category: $category) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      show
+      category
+      active
+      createdAt
+      updatedAt
+    }
+  }
+}

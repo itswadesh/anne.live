@@ -1,0 +1,22 @@
+query globalOption($id: ID!) {
+  globalOption(id: $id) {
+    id
+    name
+    key
+    val
+    categories
+    position
+    info
+    preselect
+    required
+    type
+    isFilter
+    active
+    values {
+      id
+      name
+      default
+      position
+    }
+  }
+}

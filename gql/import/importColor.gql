@@ -1,0 +1,3 @@
+mutation importColor($file: Upload!) {
+  importColor(file: $file)
+}

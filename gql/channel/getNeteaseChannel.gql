@@ -1,0 +1,19 @@
+query getNeteaseChannel($channel: String) {
+  getNeteaseChannel(channel: $channel) {
+    user {
+      id
+      firstName
+      lastName
+    }
+    requestId
+    code
+    msg
+    cid
+    ctime
+    name
+    pushUrl
+    httpPullUrl
+    hlsPullUrl
+    rtmpPullUrl
+  }
+}

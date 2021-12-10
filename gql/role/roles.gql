@@ -1,0 +1,12 @@
+query roles($page: Int, $search: String, $limit: Int, $sort: String) {
+  roles(page: $page, search: $search, limit: $limit, sort: $sort) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      roles
+    }
+  }
+}

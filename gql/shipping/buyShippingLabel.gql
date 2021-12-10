@@ -1,0 +1,26 @@
+mutation buyShippingLabel($shippoRateId: String!) {
+  buyShippingLabel(shippoRateId: $shippoRateId) {
+    object_state
+    status
+    object_id
+    object_created
+    object_updated
+    rate
+    tracking_number
+    tracking_status
+    eta
+    tracking_url_provider
+    label_url
+    commercial_invoice_url
+    order
+    metadata
+    parcel
+    qr_code_url
+    test
+    messages {
+      code
+      text
+      source
+    }
+  }
+}

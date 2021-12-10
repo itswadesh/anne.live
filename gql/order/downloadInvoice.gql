@@ -1,0 +1,118 @@
+mutation downloadInvoice($orderItemId: ID!) {
+  downloadInvoice(orderItemId: $orderItemId) {
+    id
+    orderNo
+    otp
+    createdAt
+    updatedAt
+    codPaid
+    paymentMode
+    paymentStatus
+    paymentCurrency
+    paymentReferenceId
+    paymentOrderId
+    paymentReceipt
+    invoiceId
+    paymentGateway
+    codPaid
+    amountPaid
+    amountDue
+    paymentStatus
+    paymentMsg
+    paymentTime
+    paid
+    amount {
+      qty
+      subtotal
+      tax
+      discount
+      total
+      shipping
+    }
+    userFirstName
+    userLastName
+    userPhone
+    userEmail
+    address {
+      firstName
+      lastName
+      town
+      city
+      state
+      zip
+      address
+      lat
+      lng
+    }
+    items {
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      barcode
+      img
+      imgCdn
+      slug
+      price
+      qty
+      shippingCharge
+      tax
+      subtotal
+      total
+      time
+      options
+      brandName
+      brandImg
+      brandImgCdn
+      parentBrandName
+      parentBrandImg
+      parentBrandImgCdn
+      color
+      size
+      vendor {
+        firstName
+        lastName
+        phone
+        address {
+          address
+        }
+        store {
+          name
+        }
+      }
+      vendorInfo {
+        firstName
+        lastName
+        phone
+      }
+      status
+    }
+    orderItems {
+      status
+      pid
+      posInvoiceNo
+      itemOrderNo
+      name
+      slug
+      img
+      tracking
+      shippingCharge
+      tax
+      brandName
+      brandImg
+      parentBrandName
+      parentBrandImg
+      color
+      size
+      orderHistory {
+        status
+        title
+        body
+        icon
+        public
+        index
+        time
+      }
+    }
+  }
+}

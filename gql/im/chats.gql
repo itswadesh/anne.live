@@ -1,0 +1,19 @@
+subscription chats(
+  $channel: String!
+  $page: Int
+  $limit: Int
+  ) {
+  chats( channel: $channel, page: $page, limit: $limit) {
+    count
+    pageSize
+    page
+    data {
+      id
+      channel
+      message
+      firstName
+      lastName
+    }
+  }
+}
+

@@ -1,0 +1,3 @@
+mutation importBlog($file: Upload!) {
+  importBlog(file: $file)
+}

@@ -1,0 +1,3 @@
+mutation deleteBrand($id: ID!) {
+  deleteBrand(id: $id)
+}

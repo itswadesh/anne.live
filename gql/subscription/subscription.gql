@@ -1,0 +1,32 @@
+query subscription($id: ID!) {
+  subscription(id: $id) {
+    id
+    name
+    abandonnedCartRecovery
+    active
+    annualMonthlyPrice
+    chatSupport
+    customDomain
+    description
+    discountCoupons
+    emailSupport
+    freeSSL
+    misReports
+    monthlyPrice
+    name
+    onlineStore
+    premiumSupport
+    productImportExport
+    productsAllowed
+    removeMisikiLogo
+    salesChannels
+    seoOptions
+    title
+    transactionFees
+    transactionFeesType
+    unlimitedProducts
+    unlimitedValidity
+    createdAt
+    updatedAt
+  }
+}

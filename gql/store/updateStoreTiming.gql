@@ -1,0 +1,144 @@
+mutation updateStoreTiming(
+  $id: ID!
+  $day: String
+  $fromTime: String
+  $isOpen: Boolean
+  $online: Boolean
+  $toTime: String
+) {
+  updateStoreTiming(
+    id: $id
+    day: $day
+    fromTime: $fromTime
+    isOpen: $isOpen
+    online: $online
+    toTime: $toTime
+  ) {
+    id
+    active
+    featured
+    adminNotifications {
+      lowStockNotification
+      newOrderPlaced
+    }
+    address
+    alert
+    analyticsTrackingId
+    banners
+    city
+    closed
+    closedMessage
+    currencyCode
+    currencyDecimals
+    currencySymbol
+    customerOrderNotifications {
+      downloadEGoods
+      giftCardPurchased
+      orderConfirmation
+      orderIsReadyForPickup
+      orderShipped
+      orderStatusChanged
+    }
+    description
+    metaDescription
+    dimentionUnit
+    email
+    facebook
+    facebookPixelId
+    facebookUrl
+    favicon
+    faviconCdn
+    firstName
+    freeShippingOn
+    gdpr
+    gdprCookieConsent
+    google
+    googleAdsTag
+    homeMeta1
+    homeMeta2
+    homeMeta3
+    homeMeta4
+    img
+    imgCdn
+    images
+    imagesCdn
+    instagram
+    instagramUrl
+    isHideNilStock
+    isMegamenu
+    isOpen
+    isSearch
+    keywords
+    lastName
+    lat
+    legalName
+    linkedin
+    lng
+    locality
+    logo
+    logoDark
+    logoMobile
+    logoMobileDark
+    logoCdn
+    logoDarkCdn
+    logoMobileCdn
+    logoMobileDarkCdn
+    minimumOrderValue
+    minOrderValue
+    name
+    openGraphImageCdn
+    pageSize
+    phone
+    pinterestTag
+    pinterestUrl
+    qrCode
+    review {
+      enabled
+      moderate
+    }
+    searchbarText
+    shipping {
+      charge
+      deliveryDays
+      enabled
+      free
+      method
+      provider
+    }
+    shippingCharge
+    shopAddress
+    shopPhone
+    slug
+    snapChatPixel
+    state
+    storeId
+    timeZone
+    timing
+    title
+    twitter
+    twitterUrl
+    websiteEmail
+    websiteLegalName
+    websiteName
+    weightUnit
+    youtubeUrl
+    webmail
+    zip
+    storeTiming {
+      day
+      fromTime
+      index
+      isOpen
+      online
+      toTime
+    }
+  }
+}
+
+# {
+#   "id": "6165098655cbc55580bda783",
+#   	"day": "saturday",
+#   "toTime": "1 pm",
+#   "fromTime": "9am",
+#   "isOpen": true
+# }

@@ -1,0 +1,40 @@
+query brand($id: String, $slug: String, $name: String) {
+  brand(id: $id, slug: $slug, name: $name) {
+    id
+    brandId
+    name
+    slug
+    img
+    imgCdn
+    position
+    active
+    featured
+    info
+    meta
+    metaTitle
+    metaDescription
+    metaKeywords
+    facebookUrl
+    instaUrl
+    twitterUrl
+    linkedinUrl
+    youtubeUrl
+    pinterestUrl
+    googleUrl
+    banner
+    bannerCdn
+    parent {
+      id
+      name
+    }
+    store {
+      id
+      name
+      email
+      phone
+      active
+    }
+    createdAt
+    updatedAt
+  }
+}

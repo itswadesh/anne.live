@@ -1,0 +1,29 @@
+mutation updateAllProduct {
+  updateAllProduct
+}
+
+query productsEsTruncate {
+  productsEsTruncate
+}
+
+query productsSync {
+  productsSync
+}
+
+mutation syncAutoComplete {
+  syncAutoComplete
+}
+
+query autocompleteEsSync {
+  autocompleteEsSync
+}
+
+mutation updateAllBrand {
+  updateAllBrand
+}
+mutation updateAllBanner {
+  updateAllBanner
+}
+mutation updateAllCategory {
+  updateAllCategory
+}

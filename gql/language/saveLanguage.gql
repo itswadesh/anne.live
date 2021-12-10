@@ -1,0 +1,30 @@
+mutation saveLanguage(
+  $id: String
+  $code: String
+  $name: String
+  $active: Boolean
+  $phpLocaleCode: String
+  $rtl: Boolean
+  $sort: Int
+) {
+  saveLanguage(
+    id: $id
+    code: $code
+    phpLocaleCode: $phpLocaleCode
+    rtl: $rtl
+    name: $name
+    sort: $sort
+    active: $active
+  ) {
+    id
+    name
+    code
+    phpLocaleCode
+    rtl
+    sort
+    active
+    store
+    createdAt
+    updatedAt
+  }
+}

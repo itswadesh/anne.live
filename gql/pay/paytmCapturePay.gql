@@ -1,0 +1,5 @@
+mutation paytmCapturePay($id: String!, $oid: String!) {
+  paytmCapturePay(paymentId: $id, oid: $oid) {
+    id
+  }
+}

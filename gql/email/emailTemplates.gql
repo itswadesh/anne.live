@@ -1,0 +1,50 @@
+query emailTemplates(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  emailTemplates(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      fileName
+      title
+      description
+      templateId
+      icon
+      iconCdn
+      content
+      folder
+      active
+      variables
+      createdAt
+      updatedAt
+      user {
+        id
+        firstName
+        email
+        phone
+      }
+      store {
+        id
+        name
+        email
+      }
+    }
+  }
+}
+
+# query emailTemplates($folder: String, $name: String) {
+#   emailTemplates(folder: $folder, name: $name)
+# }

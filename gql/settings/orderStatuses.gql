@@ -1,0 +1,8 @@
+query orderStatuses {
+  orderStatuses {
+    status
+    title
+    body
+    icon
+  }
+}

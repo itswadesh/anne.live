@@ -1,0 +1,32 @@
+query pages(
+  $page: Int
+  $search: String
+  $limit: Int
+  $sort: String
+  $store: ID
+) {
+  pages(
+    page: $page
+    search: $search
+    limit: $limit
+    sort: $sort
+    store: $store
+  ) {
+    data {
+      id
+      name
+      slug
+      title
+      metaDescription
+      keywords
+      content
+      menuTitle
+      active
+      createdAt
+      updatedAt
+    }
+    count
+    pageSize
+    page
+  }
+}

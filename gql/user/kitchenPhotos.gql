@@ -1,0 +1,26 @@
+mutation updateProfile(
+  $storePhotos: [String]
+  $public: Boolean
+  $store: String
+) {
+  updateProfile(
+    info: { storePhotos: $storePhotos, public: $public, store: $store }
+  ) {
+    firstName
+    lastName
+    avatar
+    avatarCdn
+    address {
+      address
+      town
+      city
+      state
+      zip
+    }
+    info {
+      public
+      store
+      storePhotos
+    }
+  }
+}

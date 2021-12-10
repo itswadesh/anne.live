@@ -1,0 +1,11 @@
+mutation gdprDataDeleteRequest($reason: String, $description: String) {
+  gdprDataDeleteRequest(reason: $reason, description: $description) {
+    id
+    reason
+    description
+    email
+    comment
+    status
+    user
+  }
+}

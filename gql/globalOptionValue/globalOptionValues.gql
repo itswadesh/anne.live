@@ -1,0 +1,31 @@
+query globalOptionValues(
+  $page: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $global_option_id: ID
+) {
+  globalOptionValues(
+    page: $page
+    limit: $limit
+    search: $search
+    sort: $sort
+    global_option_id: $global_option_id
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      global_option_id
+      name
+      default
+      position
+      active
+    }
+  }
+}
+
+# {
+#   "global_option_id": "605489551ac78523dce29b91"
+# }

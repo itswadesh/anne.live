@@ -1,0 +1,30 @@
+query listAll($page: Int, $search: String, $limit: Int, $sort: String) {
+  listAll(page: $page, search: $search, limit: $limit, sort: $sort) {
+    count
+    page
+    pageSize
+    data {
+      id
+      name
+      namePath
+      # parent
+      slug
+      img
+      imgCdn
+      banner
+      bannerCdn
+      level
+      metaTitle
+      metaDescription
+      metaKeywords
+      keywords
+      position
+      megamenu
+      active
+      featured
+      shopbycategory
+      createdAt
+      updatedAt
+    }
+  }
+}

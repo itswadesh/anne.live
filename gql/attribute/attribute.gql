@@ -1,0 +1,11 @@
+query attribute($id: ID!) {
+  attribute(id: $id) {
+    id
+    name
+    show
+    category
+    active
+    createdAt
+    updatedAt
+  }
+}

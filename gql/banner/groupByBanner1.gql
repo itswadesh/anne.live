@@ -1,0 +1,21 @@
+query groupByBanner1($store: ID) {
+  groupByBanner1(store: $store) {
+    _id
+    data {
+      _id
+      link
+      heading
+      img
+      imgCdn
+      sort
+      type
+      pageId
+      active
+      store
+      groupId
+      groupTitle
+      createdAt
+      updatedAt
+    }
+  }
+}

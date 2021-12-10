@@ -1,0 +1,3 @@
+mutation importProduct($file: Upload!) {
+  importProduct(file: $file)
+}

@@ -1,0 +1,52 @@
+mutation saveBanner(
+  $id: String!
+  $link: String
+  $heading: String
+  $img: String
+  $sort: Int
+  $type: String
+  $pageId: String
+  $groupId: String
+  $groupTitle: String
+  $active: Boolean
+  $isMobile: Boolean
+  $store: ID
+) {
+  saveBanner(
+    id: $id
+    link: $link
+    heading: $heading
+    img: $img
+    sort: $sort
+    type: $type
+    pageId: $pageId
+    groupId: $groupId
+    groupTitle: $groupTitle
+    active: $active
+    isMobile: $isMobile
+    store: $store
+  ) {
+    id
+    link
+    heading
+    img
+    imgCdn
+    sort
+    type
+    pageId
+    groupId
+    groupTitle
+    active
+    store
+    isMobile
+    createdAt
+    updatedAt
+  }
+}
+
+# {
+#   "id":"new",
+#   "img":"img2.com",
+#   "groupId":"11",
+#   "groupTitle":"trending in indian"
+# }

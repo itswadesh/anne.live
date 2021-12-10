@@ -1,0 +1,3 @@
+mutation removeVendorInfo($id: ID!) {
+  removeVendorInfo(id: $id)
+}

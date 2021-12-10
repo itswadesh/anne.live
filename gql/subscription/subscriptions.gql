@@ -1,0 +1,48 @@
+query subscriptions(
+  $page: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $active: Boolean
+) {
+  subscriptions(
+    page: $page
+    limit: $limit
+    search: $search
+    sort: $sort
+    active: $active
+  ) {
+    count
+    page
+    data {
+      id
+      name
+      abandonnedCartRecovery
+      active
+      annualMonthlyPrice
+      chatSupport
+      customDomain
+      description
+      discountCoupons
+      emailSupport
+      freeSSL
+      misReports
+      monthlyPrice
+      name
+      onlineStore
+      premiumSupport
+      productImportExport
+      productsAllowed
+      removeMisikiLogo
+      salesChannels
+      seoOptions
+      title
+      transactionFees
+      transactionFeesType
+      unlimitedProducts
+      unlimitedValidity
+      createdAt
+      updatedAt
+    }
+  }
+}

@@ -1,0 +1,36 @@
+mutation saveSize(
+  $id: String!
+  $name: String
+  $slug: String
+  $info: String
+  $img: String
+  $sort: Float
+  $featured: Boolean
+  $active: Boolean
+  $store: ID
+) {
+  saveSize(
+    id: $id
+    name: $name
+    slug: $slug
+    info: $info
+    img: $img
+    sort: $sort
+    featured: $featured
+    active: $active
+    store: $store
+  ) {
+    id
+    name
+    slug
+    info
+    img
+    imgCdn
+    sort
+    featured
+    active
+    store
+    createdAt
+    updatedAt
+  }
+}

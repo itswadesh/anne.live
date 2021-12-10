@@ -1,0 +1,32 @@
+query monitoringSummary {
+  noDescription {
+    count
+    data {
+      id
+    }
+  }
+  noStock {
+    count
+    data {
+      id
+    }
+  }
+  noPrice {
+    count
+    data {
+      id
+    }
+  }
+  noImage {
+    count
+    data {
+      id
+    }
+  }
+  invalidPrice {
+    count
+    data {
+      id
+    }
+  }
+}

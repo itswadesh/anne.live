@@ -1,0 +1,26 @@
+query coupon($id: String!) {
+  coupon(id: $id) {
+    id
+    code
+    value
+    type
+    info
+    msg
+    text
+    terms
+    color
+    minimumCartValue
+    maxAmount
+    usesPerCustomer
+    validFromDate
+    validToDate
+    active
+    createdAt
+    updatedAt
+    store {
+      id
+      name
+      email
+    }
+  }
+}

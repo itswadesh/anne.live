@@ -1,0 +1,20 @@
+mutation paypalPayNow($address: ID, $slot: ID) {
+  paypalPayNow(address: $address, slot: $slot) {
+    id
+    intent
+    state
+    redirect_url
+    transactions {
+      amount {
+        total
+        currency
+      }
+      description
+    }
+    links {
+      href
+      rel
+      method
+    }
+  }
+}

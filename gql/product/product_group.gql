@@ -1,0 +1,23 @@
+query product_group($id: ID!) {
+  product_group(id: $id) {
+    sizeGroup {
+      id
+      slug
+      stock
+      size {
+        id
+        name
+      }
+    }
+    colorGroup {
+      id
+      slug
+      stock
+      color {
+        id
+        name
+        color_code
+      }
+    }
+  }
+}

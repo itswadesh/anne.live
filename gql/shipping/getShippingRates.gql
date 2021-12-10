@@ -1,0 +1,53 @@
+mutation getShippingRates(
+  $fromAddress: ID!
+  $toAddress: ID!
+  $length: Float!
+  $width: Float!
+  $height: Float!
+  $distance_unit: String!
+  $weight: Float!
+  $mass_unit: String!
+) {
+  getShippingRates(
+    fromAddress: $fromAddress
+    toAddress: $toAddress
+    length: $length
+    width: $width
+    height: $height
+    distance_unit: $distance_unit
+    weight: $weight
+    mass_unit: $mass_unit
+  ) {
+    messages {
+      text
+      code
+      source
+    }
+    rates {
+      object_id
+      object_created
+      shipment
+      attributes
+      amount
+      currency
+      amount_local
+      currency_local
+      provider
+      provider_image_75
+      provider_image_200
+      estimated_days
+      arrives_by
+      duration_terms
+      carrier_account
+      test
+      zone
+      servicelevel {
+        name
+        token
+        terms
+        extended_token
+        parent_servicelevel
+      }
+    }
+  }
+}

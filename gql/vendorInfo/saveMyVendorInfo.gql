@@ -1,0 +1,50 @@
+mutation saveMyVendorInfo(
+  $bankAccountNo: Float
+  $bankName: String
+  $bankIfsc: String
+  $bankAccountHolderName: String
+  $bankSwiftCode: String
+  $commissionType: String
+  $commissionValue: Float
+  $banner: String
+  $address: ID
+  $businessName: String
+) {
+  saveMyVendorInfo(
+    bankAccountNo: $bankAccountNo
+    bankName: $bankName
+    bankIfsc: $bankIfsc
+    bankAccountHolderName: $bankAccountHolderName
+    bankSwiftCode: $bankSwiftCode
+    commissionType: $commissionType
+    commissionValue: $commissionValue
+    banner: $banner
+    address: $address
+    businessName: $businessName
+  ) {
+    id
+    businessName
+    bankAccountNo
+    bankName
+    bankIfsc
+    bankAccountHolderName
+    bankSwiftCode
+    banner
+    bannerCdn
+    commissionType
+    commissionValue
+    createdAt
+    updatedAt
+    address {
+      id
+      address
+      locality
+      city
+      state
+      country
+      zip
+      lat
+      lng
+    }
+  }
+}

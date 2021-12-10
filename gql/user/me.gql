@@ -1,0 +1,53 @@
+query me {
+  me {
+    id
+    firstName
+    lastName
+    email
+    phone
+    gender
+    role
+    verified
+    active
+    provider
+    active
+    avatar
+    avatarCdn
+    referralCode
+    currentBalance
+    storeName
+    banner
+    store
+    roles {
+      id
+      name
+      roles
+    }
+    # product_sold
+    address {
+      id
+      email
+      firstName
+      lastName
+      address
+      town
+      city
+      district
+      state
+      country
+      zip
+      phone
+      active
+      verified
+      # lat
+      # lng
+    }
+    info {
+      public
+      store
+      storePhotos
+    }
+    vendorInfo
+    # plan
+  }
+}

@@ -1,0 +1,39 @@
+mutation saveEmailTemplate(
+  $id: String!
+  $name: String
+  $title: String
+  $description: String
+  $content: String
+  $icon: String
+  $active: Boolean
+  $variables: [String]
+  $store: ID
+) {
+  saveEmailTemplate(
+    id: $id
+    name: $name
+    title: $title
+    description: $description
+    icon: $icon
+    content: $content
+    active: $active
+    variables: $variables
+    store: $store
+  ) {
+    id
+    name
+    fileName
+    templateId
+    folder
+    title
+    description
+    icon
+    iconCdn
+    content
+    active
+    variables
+    store
+    createdAt
+    updatedAt
+  }
+}

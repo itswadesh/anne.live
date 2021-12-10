@@ -1,0 +1,37 @@
+mutation savePage(
+  $id: String
+  $name: String
+  $title: String
+  $slug: String
+  $metaDescription: String
+  $keywords: String
+  $content: String
+  $menuTitle: String
+  $active: Boolean
+) {
+  savePage(
+    id: $id
+    name: $name
+    title: $title
+    slug: $slug
+    metaDescription: $metaDescription
+    keywords: $keywords
+    content: $content
+    menuTitle: $menuTitle
+    active: $active
+  ) {
+    id
+    name
+    slug
+    title
+    metaDescription
+    keywords
+    content
+    menuTitle
+    active
+    createdAt
+    updatedAt
+    user
+    store
+  }
+}

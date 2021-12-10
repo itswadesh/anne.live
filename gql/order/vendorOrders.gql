@@ -1,0 +1,66 @@
+query vendorOrders($status: String!, $vendor: ID!) {
+  vendorOrders(status: $status, vendor: $vendor) {
+    count
+    pageSize
+    page
+    data {
+      id
+      orderNo
+      reviewed
+      otp
+      createdAt
+      updatedAt
+      codPaid
+      paymentMode
+      paymentTxStatus
+      paymentAmount
+      amount {
+        qty
+        subtotal
+        tax
+        discount
+        total
+        shipping
+      }
+      user {
+        firstName
+        lastName
+        phone
+        email
+        gender
+        info {
+          public
+          store
+          storePhotos
+        }
+        avatar
+      }
+      address {
+        address
+        firstName
+        lastName
+      }
+      items {
+        pid
+        name
+        slug
+        img
+        imgCdn
+        price
+        qty
+        status
+        vendor {
+          store
+          firstName
+          lastName
+          phone
+        }
+      }
+    }
+  }
+}
+
+# {
+#   "vendor": "60784961ca5cbc31b45f2acc",
+#   "status": "Ordered"
+# }

@@ -1,0 +1,15 @@
+subscription messageReceived($channel: String!) {
+  messageReceived(channel: $channel) {
+    id
+    channel
+    message
+    firstName
+    lastName
+  }
+}
+
+
+
+# {
+#   "channel": "11111"
+# }

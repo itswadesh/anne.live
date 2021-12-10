@@ -1,0 +1,7 @@
+query paymentMethodSummary($vendor: ID) {
+  paymentMethodSummary(vendor: $vendor) {
+    _id
+    count
+    amount
+  }
+}

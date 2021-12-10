@@ -1,0 +1,13 @@
+query shippingMethod($id: ID!) {
+  shippingMethod(id: $id) {
+    id
+    carrierName
+    method
+    shippingNameAtCheckout
+    minWeight
+    maxWeight
+    amount
+    tableBasedOn
+    user
+  }
+}

@@ -1,0 +1,3 @@
+mutation removeLocation($id: ID!) {
+  removeLocation(id: $id)
+}

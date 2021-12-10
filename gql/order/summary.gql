@@ -1,0 +1,28 @@
+query summary {
+  statusSummary {
+    _id
+    count
+    amount
+  }
+  byVendor {
+    count
+    pageSize
+    page
+    data {
+      _id {
+        vendor {
+          firstName
+          lastName
+          phone
+        }
+      }
+      date
+      items {
+        pid
+        name
+      }
+      total
+      count
+    }
+  }
+}

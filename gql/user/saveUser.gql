@@ -1,0 +1,55 @@
+mutation saveUser(
+  $id: String!
+  $firstName: String
+  $lastName: String
+  $avatar: String
+  $role: String
+  $verified: Boolean
+  $gender: String
+  $city: String
+  $phone: String
+  $email: String
+  $shippingCharges: Int
+  $freeShippingOn: Int
+  $roles: [ID]
+  $storeName: String
+  $banner: String
+) {
+  saveUser(
+    id: $id
+    firstName: $firstName
+    lastName: $lastName
+    avatar: $avatar
+    role: $role
+    verified: $verified
+    gender: $gender
+    city: $city
+    phone: $phone
+    email: $email
+    shippingCharges: $shippingCharges
+    freeShippingOn: $freeShippingOn
+    roles: $roles
+    storeName: $storeName
+    banner: $banner
+  ) {
+    id
+    email
+    firstName
+    lastName
+    role
+    slug
+    avatar
+    avatarCdn
+    verified
+    gender
+    city
+    phone
+    active
+    verified
+    shippingCharges
+    freeShippingOn
+    storeName
+    banner
+    roles
+  }
+}

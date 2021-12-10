@@ -1,0 +1,34 @@
+query allTransactions(
+  $page: Int
+  $skip: Int
+  $limit: Int
+  $search: String
+  $sort: String
+  $q: String
+  $store: ID
+) {
+  allTransactions(
+    page: $page
+    skip: $skip
+    search: $search
+    limit: $limit
+    sort: $sort
+    q: $q
+    store: $store
+  ) {
+    count
+    page
+    pageSize
+    data {
+      id
+      amount
+      remark
+      direction
+      user
+      balance
+      referedUser
+      createdAt
+      updatedAt
+    }
+  }
+}

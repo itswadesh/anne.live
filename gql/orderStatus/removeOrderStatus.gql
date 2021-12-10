@@ -1,0 +1,3 @@
+mutation removeOrderStatus($id: ID!) {
+  removeOrderStatus(id: $id)
+}

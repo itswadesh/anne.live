@@ -1,0 +1,28 @@
+mutation OrderRefund(
+  $orderItemId: ID!
+  $qty: Int!
+  $amount: Float!
+  $note: String!
+  $email: String!
+  $password: String!
+) {
+  OrderRefund(
+    orderItemId: $orderItemId
+    qty: $qty
+    amount: $amount
+    note: $note
+    email: $email
+    password: $password
+  ) {
+    id
+  }
+}
+
+# {
+#   "orderItemId": "610e188aff2417200caf4ef4",
+#   "qty": 1,
+#   "amount": 1.5,
+#   "note": "aaap",
+#   "email": "admin@litekart.in",
+#   "password": "Admin"
+# }

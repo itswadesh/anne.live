@@ -1,0 +1,16 @@
+mutation saveSlot(
+  $id: String!
+  $name: String
+  $value: String
+  $info: String
+  $active: Boolean
+) {
+  saveSlot(id: $id, name: $name, value: $value, info: $info, active: $active) {
+    id
+    name
+    value
+    info
+    active
+    store
+  }
+}
